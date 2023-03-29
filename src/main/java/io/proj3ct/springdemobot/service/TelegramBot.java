@@ -5,7 +5,6 @@ import io.proj3ct.springdemobot.config.BotConfig;
 import io.proj3ct.springdemobot.model.User;
 import io.proj3ct.springdemobot.model.UserRepository;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.methods.commands.SetMyCommands;
@@ -28,10 +27,8 @@ import java.util.List;
 @Component
 @Slf4j
 public class TelegramBot extends TelegramLongPollingBot {
-
-    @Autowired
-    private UserRepository userRepository;
-    BotConfig config;
+    private final UserRepository userRepository;
+    private final BotConfig config;
     static final String YES_BUTTON = "YES_BUTTON";
     static final String NO_BUTTON = "NO_BUTTON";
 
@@ -41,8 +38,9 @@ public class TelegramBot extends TelegramLongPollingBot {
             "Type /mydata to see data stored about yourself\n\n" +
             "Type /help to see this message again";
 
-    public TelegramBot(BotConfig config){
+    public TelegramBot(BotConfig config, UserRepository userRepository){
         this.config = config;
+        this.userRepository = userRepository;
         List<BotCommand> listOfCommands = new ArrayList<>();
         listOfCommands.add(new BotCommand("/start","get a welcome message"));
         listOfCommands.add(new BotCommand("/mydata", "get your data stored"));
@@ -62,7 +60,7 @@ public class TelegramBot extends TelegramLongPollingBot {
         if(update.hasMessage() && update.getMessage().hasText()){
             String messageText = update.getMessage().getText();
             long chatId = update.getMessage().getChatId();
-            if(messageText.contains("/send ") && config.getOwnerId()==chatId){
+            if(messageText.contains("/send ") && config.getOwner()==chatId){
                 var textToSend = EmojiParser.parseToUnicode(messageText.substring(messageText.indexOf(" ")));
                 var users = userRepository.findAll();
                 for(User user : users){
@@ -198,7 +196,7 @@ public class TelegramBot extends TelegramLongPollingBot {
 
     @Override
     public String getBotUsername() {
-        return config.getBotName();
+        return config.getName();
     }
 
     @Override
