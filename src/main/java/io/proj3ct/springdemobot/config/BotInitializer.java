@@ -1,8 +1,8 @@
 package io.proj3ct.springdemobot.config;
 
+import io.proj3ct.springdemobot.property.TgAdminInformation;
 import io.proj3ct.springdemobot.service.TelegramBot;
 import lombok.extern.slf4j.Slf4j;
-import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.event.ContextRefreshedEvent;
 import org.springframework.context.event.EventListener;
 import org.springframework.stereotype.Component;
@@ -13,9 +13,13 @@ import org.telegram.telegrambots.updatesreceivers.DefaultBotSession;
 @Slf4j
 @Component
 public class BotInitializer {
+    private final TelegramBot telegramBot;
+    private final TgAdminInformation tgAdminInformation;
 
-    @Autowired
-    TelegramBot telegramBot;
+    public BotInitializer(TelegramBot telegramBot, TgAdminInformation tgAdminInformation){
+        this.telegramBot=telegramBot;
+        this.tgAdminInformation=tgAdminInformation;
+    }
 
     @EventListener({ContextRefreshedEvent.class})
     public void init() throws TelegramApiException {
