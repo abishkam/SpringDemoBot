@@ -1,13 +1,8 @@
 package io.proj3ct.springdemobot.model;
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
+import jakarta.persistence.*;
 
 import lombok.*;
-
-import java.sql.Timestamp;
 
 @Entity
 @Getter
@@ -18,13 +13,6 @@ import java.sql.Timestamp;
 public class Repeat {
 
     @Id
-    @GeneratedValue
-    private Long repeatId;
+    private Integer messageId;
     private String message;
-    private Timestamp time;
-
-    public Repeat(String message, Timestamp time) {
-        this.message = message;
-        this.time = time;
-    }
 }
