@@ -8,13 +8,13 @@ import org.mapstruct.Mapper;
 
 import java.util.List;
 
-@Mapper
+@Mapper(componentModel = "spring")
 public interface BotMapper {
 
     RepeatDTO RepeatModelToDTO(Repeat repeat);
     Repeat RepeatDTOToModel(RepeatDTO repeatDTO);
     UserDTO UserModelToDTO(User user);
     User UserDTOToModel(UserDTO userDTO);
-    List<Repeat> map(List<RepeatDTO> repeatDTO);
+    List<RepeatDTO> map(List<Repeat> repeat);
 
 }

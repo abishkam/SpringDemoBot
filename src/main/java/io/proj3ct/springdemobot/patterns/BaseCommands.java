@@ -13,6 +13,7 @@ public class BaseCommands {
         this.listOfCommands = listOfCommands;
         listOfCommands.add(new BotCommand("/start","get a welcome message"));
         listOfCommands.add(new BotCommand("/help","info how to use this bot"));
+        listOfCommands.add(new BotCommand("/getallmessages","get all your messages with id"));
     }
 
     public List<BotCommand> getListOfCommands() {
