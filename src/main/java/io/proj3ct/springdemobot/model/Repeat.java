@@ -7,12 +7,11 @@ import lombok.*;
 @Entity
 @Getter
 @Setter
-@ToString
 @NoArgsConstructor
 @AllArgsConstructor
 public class Repeat {
 
     @Id
-    private Integer messageId;
+    private Long messageId;
     private String message;
 }

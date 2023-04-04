@@ -1,4 +1,4 @@
-package io.proj3ct.springdemobot.switchcase;
+package io.proj3ct.springdemobot.handler;
 
 import com.vdurmont.emoji.EmojiParser;
 import io.proj3ct.springdemobot.model.User;

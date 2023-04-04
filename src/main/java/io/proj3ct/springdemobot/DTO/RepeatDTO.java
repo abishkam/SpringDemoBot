@@ -1,10 +1,10 @@
 package io.proj3ct.springdemobot.DTO;
 
-import java.sql.Timestamp;
+import lombok.Data;
 
+@Data
 public class RepeatDTO {
 
-    private Long repeatId;
+    private Long messageId;
     private String message;
-    private Timestamp time;
 }

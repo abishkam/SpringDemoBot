@@ -1,4 +1,4 @@
-package io.proj3ct.springdemobot.switchcase;
+package io.proj3ct.springdemobot.handler;
 
 import com.vdurmont.emoji.EmojiParser;
 import io.proj3ct.springdemobot.model.Repeat;
@@ -11,7 +11,7 @@ import org.telegram.telegrambots.meta.api.objects.Message;
 import java.util.*;
 
 
-@Service("/send ")
+@Service("/send")
 public class SendMessageHandler implements MessageHandler{
 
     private final UserRepository userRepository;
@@ -24,15 +24,18 @@ public class SendMessageHandler implements MessageHandler{
     @Transactional
     public SendMessage send(Message mes){
 
+        String chatId = String.valueOf(mes.getChatId());
+        System.out.println(chatId);
+        if(mes.getText().equals("/send") || mes.getText().equals("/send ") ){
+            return new SendMessage(chatId, "You didn't write message");
+        }else{
             var textToSend = EmojiParser.parseToUnicode(mes.getText().substring(mes.getText().indexOf(" ")));
             Optional<User> user = userRepository.findById(mes.getChatId());
-            if(user.isPresent()) user.get().getRepeat().add(new Repeat(mes.getMessageId(), textToSend));
+            user.ifPresent(value -> value.getRepeat().add(new Repeat(Long.valueOf(mes.getMessageId()), textToSend)));
 
-            SendMessage message = new SendMessage();
-            message.setChatId(String.valueOf(mes.getChatId()));
-            message.setText(textToSend);
+            return new SendMessage(chatId, "Id of a message - " + mes.getMessageId());
+        }
 
-            return message;
     }
 
 }

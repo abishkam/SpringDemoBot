@@ -4,8 +4,8 @@ import io.proj3ct.springdemobot.model.UserRepository;
 import io.proj3ct.springdemobot.patterns.BaseCommands;
 import io.proj3ct.springdemobot.property.TgAdminInformation;
 import io.proj3ct.springdemobot.property.TgBotInfo;
-import io.proj3ct.springdemobot.switchcase.MessageHandler;
-import io.proj3ct.springdemobot.switchcase.SendMessageHandler;
+import io.proj3ct.springdemobot.handler.MessageHandler;
+import io.proj3ct.springdemobot.handler.SendMessageHandler;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
@@ -47,8 +47,6 @@ public class TelegramBot extends TelegramLongPollingBot {
 
         messageHandlerMap.keySet().forEach(System.out::println);
 
-
-
         if(update.hasMessage() && update.getMessage().hasText()){
 
             String messageText = update.getMessage().getText();
@@ -64,7 +62,7 @@ public class TelegramBot extends TelegramLongPollingBot {
                     }
                 }
             }
-            MessageHandler a = messageHandlerMap.get(messageText.substring(0,6));
+            MessageHandler a = messageHandlerMap.get(messageText.split(" ")[0]);
             try {
                 execute(a.send(update.getMessage()));
             } catch (TelegramApiException e) {

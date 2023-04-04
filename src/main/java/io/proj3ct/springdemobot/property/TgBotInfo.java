@@ -13,13 +13,8 @@ public class TgBotInfo {
         this.config=config;
     }
 
-    public String welcomMessage(){
-        return config.botInfo().getMessage("welcome.message", null, Locale.ENGLISH);
+    public String helpMessage(){
+        return config.botInfo().getMessage("help.message", null, Locale.ENGLISH);
     }
-    public String yesButton(){
-        return config.botInfo().getMessage("yes.button", null, Locale.ENGLISH);
-    }
-    public String noButton(){
-        return config.botInfo().getMessage("no.button", null, Locale.ENGLISH);
-    }
+
 }

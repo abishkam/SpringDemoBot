@@ -6,12 +6,15 @@ import io.proj3ct.springdemobot.model.Repeat;
 import io.proj3ct.springdemobot.model.User;
 import org.mapstruct.Mapper;
 
-import java.util.Optional;
+import java.util.List;
 
 @Mapper
 public interface BotMapper {
+
     RepeatDTO RepeatModelToDTO(Repeat repeat);
     Repeat RepeatDTOToModel(RepeatDTO repeatDTO);
-    UserDTO UserModelToDTO(Optional<User> user);
+    UserDTO UserModelToDTO(User user);
     User UserDTOToModel(UserDTO userDTO);
+    List<Repeat> map(List<RepeatDTO> repeatDTO);
+
 }
