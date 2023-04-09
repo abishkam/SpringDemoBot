@@ -1,7 +1,7 @@
 package org.example.tgbd.mapper;
 
-import org.example.tgbd.Dto.RepeatDto;
-import org.example.tgbd.Dto.UserDto;
+import org.example.tgbd.dto.RepeatDto;
+import org.example.tgbd.dto.UserDto;
 import org.example.tgbd.model.Repeat;
 import org.example.tgbd.model.User;
 import org.mapstruct.Mapper;

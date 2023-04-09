@@ -1,4 +1,4 @@
-package org.example.tgbd.patterns;
+package org.example.tgservice.patterns;
 
 import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.meta.api.objects.commands.BotCommand;
@@ -20,7 +20,4 @@ public class BaseCommands {
         return listOfCommands;
     }
 
-    public static void main(String[] args) {
-
-    }
 }

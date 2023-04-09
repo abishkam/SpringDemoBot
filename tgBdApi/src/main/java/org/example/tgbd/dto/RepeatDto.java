@@ -1,4 +1,4 @@
-package org.example.tgbd.Dto;
+package org.example.tgbd.dto;
 
 import lombok.Data;
 

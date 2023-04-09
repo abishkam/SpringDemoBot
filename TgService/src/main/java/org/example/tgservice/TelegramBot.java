@@ -1,9 +1,9 @@
 package org.example.tgservice;
 
 import lombok.extern.slf4j.Slf4j;
-import org.example.tgbd.patterns.BaseCommands;
 import org.example.tgservice.handler.MessageHandler;
 import org.example.tgservice.handler.SendMessageHandler;
+import org.example.tgservice.patterns.BaseCommands;
 import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.methods.commands.SetMyCommands;

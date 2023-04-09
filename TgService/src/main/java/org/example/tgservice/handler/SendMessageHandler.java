@@ -3,9 +3,6 @@ package org.example.tgservice.handler;
 import com.vdurmont.emoji.EmojiParser;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
-import org.example.tgbd.model.Repeat;
-import org.example.tgbd.model.User;
-import org.example.tgbd.model.UserRepository;
 import org.springframework.stereotype.Service;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Message;
@@ -17,7 +14,6 @@ import java.util.Optional;
 @RequiredArgsConstructor
 public class SendMessageHandler implements MessageHandler {
 
-    private final UserRepository userRepository;
 
     @Transactional
     public SendMessage send(Message mes) {
@@ -28,8 +24,9 @@ public class SendMessageHandler implements MessageHandler {
             return new SendMessage(chatId, "You didn't write message");
         } else {
             var textToSend = EmojiParser.parseToUnicode(mes.getText().substring(mes.getText().indexOf(" ")));
-            Optional<User> user = userRepository.findById(mes.getChatId());
-            user.ifPresent(value -> value.getRepeat().add(new Repeat(Long.valueOf(mes.getMessageId()), textToSend)));
+            //todo rest Template with UserDto
+//            Optional<UserDto> user = userRepository.findById(mes.getChatId());
+//            user.ifPresent(value -> value.getRepeat().add(new Repeat(Long.valueOf(mes.getMessageId()), textToSend)));
 
             return new SendMessage(chatId, "Id of a message - " + mes.getMessageId());
         }

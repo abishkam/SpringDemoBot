@@ -1,6 +1,5 @@
-package org.example.tgbd.Dto;
+package org.example.tgbd.dto;
 
-import org.example.tgbd.model.Repeat;
 import lombok.Data;
 
 import java.util.List;
@@ -10,5 +9,5 @@ public class UserDto {
 
     private Long chatId;
     private String userName;
-    private List<Repeat> repeat;
+    private List<RepeatDto> repeat;
 }
