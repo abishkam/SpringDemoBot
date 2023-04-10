@@ -2,8 +2,8 @@
 
 create table pavlik.repeat (
        message_id bigint not null,
-       message varchar(2048) not null,
-       user_id bigint,
+       message text unique not null,
+       user_id bigint not null ,
        primary key (message_id)
 );
 

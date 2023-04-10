@@ -20,7 +20,7 @@ public class StartMessageHandler implements MessageHandler {
         var chatId = msg.getChatId();
         var chat = msg.getChat();
 
-        String url = String.format("http://localhost:8080//user/%s/%s", chatId, chat.getUserName());
+        String url = String.format("http://localhost:8080/user/%s/%s", chatId, chat.getUserName());
         ResponseEntity<Boolean> response = restTemplate.getForEntity(url, Boolean.class);
         Boolean answerRest = Objects.requireNonNull(response.getBody());
 
