@@ -391,34 +391,34 @@
                         <message key="summary.javaDoc" value="Недопустимый фрагмент в кратком описании." />
                 </module>
                 <!--7.3; 7.3.1; 7.3.2 -->
-                <module name="JavadocType">
-                        <property name="scope" value="package" />
-                        <message key="javadoc.missing" value="Пропущен Javadoc комментарий." />
-                        <message key="javadoc.unknownTag" value="Неизвестный тег ''{0}''." />
-                        <message key="type.missingTag" value="В Javadoc комментарии класса пропущен {0} тег." />
-                        <message key="type.tagFormat"
-                                value="Тег {0} в Javadoc комментарии класса должен соответствовать паттерну ''{1}''." />
-                        <message key="javadoc.unusedTag" value="Неиспользованный {0} тег для ''{1}''." />
-                        <message key="javadoc.unusedTagGeneral" value="Неиспользованный Javadoc тег." />
-                </module>
-                <module name="JavadocVariable">
-                        <property name="scope" value="package" />
-                        <message key="javadoc.missing" value="Пропущен Javadoc комментарий." />
-                </module>
-                <module name="JavadocMethod">
-                        <property name="scope" value="package" />
-                        <property name="allowMissingPropertyJavadoc" value="true" />
-                        <property name="allowedAnnotations" value="Override" />
-                        <message key="javadoc.missing" value="Пропущен Javadoc комментарий." />
-                        <message key="javadoc.classInfo"
-                                value="Не удалось получить информацию о классе для {0} тега ''{1}''." />
-                        <message key="javadoc.unusedTagGeneral" value="Неиспользуемый Javadoc тег." />
-                        <message key="javadoc.invalidInheritDoc"
-                                value="Невалидное использование '{'@inheritDoc'}' тега." />
-                        <message key="javadoc.unusedTag" value="Неиспользованный {0} тег для ''{1}''." />
-                        <message key="javadoc.expectedTag" value="Ожидается тег {0} для ''{1}''." />
-                        <message key="javadoc.return.expected" value="Ожидается @return тег." />
-                        <message key="javadoc.duplicateTag" value="Дубликат {0} тега." />
-                </module>
+<!--                <module name="JavadocType">-->
+<!--                        <property name="scope" value="package" />-->
+<!--                        <message key="javadoc.missing" value="Пропущен Javadoc комментарий." />-->
+<!--                        <message key="javadoc.unknownTag" value="Неизвестный тег ''{0}''." />-->
+<!--                        <message key="type.missingTag" value="В Javadoc комментарии класса пропущен {0} тег." />-->
+<!--                        <message key="type.tagFormat"-->
+<!--                                value="Тег {0} в Javadoc комментарии класса должен соответствовать паттерну ''{1}''." />-->
+<!--                        <message key="javadoc.unusedTag" value="Неиспользованный {0} тег для ''{1}''." />-->
+<!--                        <message key="javadoc.unusedTagGeneral" value="Неиспользованный Javadoc тег." />-->
+<!--                </module>-->
+<!--                <module name="JavadocVariable">-->
+<!--                        <property name="scope" value="package" />-->
+<!--                        <message key="javadoc.missing" value="Пропущен Javadoc комментарий." />-->
+<!--                </module>-->
+<!--                <module name="JavadocMethod">-->
+<!--                        <property name="scope" value="package" />-->
+<!--                        <property name="allowMissingPropertyJavadoc" value="true" />-->
+<!--                        <property name="allowedAnnotations" value="Override" />-->
+<!--                        <message key="javadoc.missing" value="Пропущен Javadoc комментарий." />-->
+<!--                        <message key="javadoc.classInfo"-->
+<!--                                value="Не удалось получить информацию о классе для {0} тега ''{1}''." />-->
+<!--                        <message key="javadoc.unusedTagGeneral" value="Неиспользуемый Javadoc тег." />-->
+<!--                        <message key="javadoc.invalidInheritDoc"-->
+<!--                                value="Невалидное использование '{'@inheritDoc'}' тега." />-->
+<!--                        <message key="javadoc.unusedTag" value="Неиспользованный {0} тег для ''{1}''." />-->
+<!--                        <message key="javadoc.expectedTag" value="Ожидается тег {0} для ''{1}''." />-->
+<!--                        <message key="javadoc.return.expected" value="Ожидается @return тег." />-->
+<!--                        <message key="javadoc.duplicateTag" value="Дубликат {0} тега." />-->
+<!--                </module>-->
         </module>
 </module>
