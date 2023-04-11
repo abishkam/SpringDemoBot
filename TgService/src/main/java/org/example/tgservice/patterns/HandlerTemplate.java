@@ -1,20 +1,23 @@
 package org.example.tgservice.patterns;
 
 import org.springframework.http.ResponseEntity;
+import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
+@Service
 public class HandlerTemplate {
 
     private final RestTemplate restTemplate = new RestTemplate();
 
-    public <T> ResponseEntity<T> createResponse(Class clazz, String action, String... variables){
+    public <T> ResponseEntity<T> createResponse(Class<T> type, String action, String... variables){
 
         StringBuilder urlPattern = new StringBuilder("http://localhost:8080/user/"+action);
         for (String obj: variables) {
-            urlPattern.append("/"+obj);
+            urlPattern.append("/");
+            urlPattern.append(obj);
         }
 
-        return restTemplate.getForEntity(urlPattern.toString(), clazz);
+        return restTemplate.getForEntity(urlPattern.toString(), type);
     }
 
 }

@@ -4,9 +4,7 @@ import com.vdurmont.emoji.EmojiParser;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
 import org.example.tgservice.patterns.HandlerTemplate;
-import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Message;
 
@@ -14,7 +12,7 @@ import org.telegram.telegrambots.meta.api.objects.Message;
 @RequiredArgsConstructor
 public class SendMessageHandler implements MessageHandler {
 
-    private final HandlerTemplate handlerTemplate = new HandlerTemplate();
+    private final HandlerTemplate handlerTemplate;
 
     @Transactional
     public SendMessage send(Message mes) {
@@ -25,7 +23,7 @@ public class SendMessageHandler implements MessageHandler {
         String message = mes.getText();
 
 
-        if ( mes.getText().equals("/send") || mes.getText().equals("/send ") ) {
+        if (mes.getText().trim().equals("/send")) {
             return new SendMessage(chatId, "You didn't write message");
         } else {
 
