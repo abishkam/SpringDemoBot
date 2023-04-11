@@ -2,6 +2,7 @@ package org.example.tgservice.handler;
 
 import com.vdurmont.emoji.EmojiParser;
 import lombok.RequiredArgsConstructor;
+import org.example.tgservice.patterns.HandlerTemplate;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -14,16 +15,16 @@ import java.util.Objects;
 @RequiredArgsConstructor
 public class StartMessageHandler implements MessageHandler {
 
-    private final RestTemplate restTemplate = new RestTemplate();
+    private final HandlerTemplate handlerTemplate = new HandlerTemplate();
 
     public SendMessage send(Message msg) {
         var chatId = msg.getChatId();
         var chat = msg.getChat();
 
-        String url = String.format("http://localhost:8080/user/%s/%s", chatId, chat.getUserName());
-        ResponseEntity<Boolean> response = restTemplate.getForEntity(url, Boolean.class);
-        Boolean answerRest = Objects.requireNonNull(response.getBody());
+        ResponseEntity<Boolean> response =
+                (ResponseEntity<Boolean>) handlerTemplate.createResponse(true,"createUser", chatId.toString(), chat.getUserName());
 
+        Boolean answerRest = Objects.requireNonNull(response.getBody());
 
         if (answerRest) {
             String answer =

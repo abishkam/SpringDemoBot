@@ -3,6 +3,7 @@ package org.example.tgservice.handler;
 import com.vdurmont.emoji.EmojiParser;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
+import org.example.tgservice.patterns.HandlerTemplate;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -13,7 +14,7 @@ import org.telegram.telegrambots.meta.api.objects.Message;
 @RequiredArgsConstructor
 public class SendMessageHandler implements MessageHandler {
 
-    private final RestTemplate restTemplate = new RestTemplate();
+    private final HandlerTemplate handlerTemplate = new HandlerTemplate();
 
     @Transactional
     public SendMessage send(Message mes) {
@@ -29,8 +30,9 @@ public class SendMessageHandler implements MessageHandler {
         } else {
 
             var textToSend = EmojiParser.parseToUnicode(message.substring(mes.getText().indexOf(" ")));
-            String url = String.format("http://localhost:8080/user/%s/%s/%s/%s", chatId, name, messageId, textToSend);
-            ResponseEntity<Void> response = restTemplate.getForEntity(url, Void.class);
+
+            ResponseEntity<String> allMessages =
+                    (ResponseEntity<String>) handlerTemplate.createResponse(new String(),"setMessage", chatId, name, messageId, textToSend);
 
             return new SendMessage(chatId, "Id of a message - " + messageId);
         }
