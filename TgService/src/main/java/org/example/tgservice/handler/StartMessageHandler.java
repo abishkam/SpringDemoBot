@@ -21,8 +21,7 @@ public class StartMessageHandler implements MessageHandler {
         var chatId = msg.getChatId();
         var chat = msg.getChat();
 
-        ResponseEntity<Boolean> response =
-                (ResponseEntity<Boolean>) handlerTemplate.createResponse(true,"createUser", chatId.toString(), chat.getUserName());
+        ResponseEntity<Boolean> response =  handlerTemplate.createResponse(Boolean.class,"createUser", chatId.toString(), chat.getUserName());
 
         Boolean answerRest = Objects.requireNonNull(response.getBody());
 
@@ -32,7 +31,7 @@ public class StartMessageHandler implements MessageHandler {
                             .parseToUnicode("Hi, " + chat.getUserName() + ", nice to meet you!");
             return new SendMessage(String.valueOf(chatId), answer);
         }
-        return new SendMessage(String.valueOf(chatId), "You are already registered");
+        return new SendMessage(String.valueOf(chatId), "You were already registered");
     }
 
 }

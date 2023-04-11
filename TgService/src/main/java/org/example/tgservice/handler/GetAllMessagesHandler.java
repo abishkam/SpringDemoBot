@@ -26,8 +26,7 @@ public class GetAllMessagesHandler implements MessageHandler {
         String chatId = String.valueOf(mes.getChatId());
         String name = mes.getChat().getUserName();
 
-        ResponseEntity<String> allMessages =
-                (ResponseEntity<String>) handlerTemplate.createResponse(new String(),"getAllMessages", chatId, name);
+        ResponseEntity<String> allMessages = handlerTemplate.createResponse(String.class,"getAllMessages", chatId, name);
 
         return new SendMessage(chatId, Objects.requireNonNull(allMessages.getBody()));
     }

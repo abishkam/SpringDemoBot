@@ -31,8 +31,7 @@ public class SendMessageHandler implements MessageHandler {
 
             var textToSend = EmojiParser.parseToUnicode(message.substring(mes.getText().indexOf(" ")));
 
-            ResponseEntity<String> allMessages =
-                    (ResponseEntity<String>) handlerTemplate.createResponse(new String(),"setMessage", chatId, name, messageId, textToSend);
+            handlerTemplate.createResponse(Void.class,"setMessage", chatId, name, messageId, textToSend);
 
             return new SendMessage(chatId, "Id of a message - " + messageId);
         }

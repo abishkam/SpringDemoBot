@@ -8,7 +8,6 @@ import org.example.tgbd.model.User;
 import org.example.tgbd.model.UserRepository;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 
 import java.util.Arrays;
 import java.util.List;
@@ -24,7 +23,9 @@ public class UserService {
     private final BotMapper botMapper;
 
     public Boolean createNewUser(Long chatId, String name) {
-        if (userRepository.findById(chatId).isEmpty()) {
+        Optional<User> checkUser = userRepository.findById(chatId);
+
+        if (checkUser.isEmpty()) {
             User user = new User();
             user.setChatId(chatId);
             user.setUserName(name);
@@ -66,10 +67,7 @@ public class UserService {
             }
         } else {
             message = "You don't have any stored messages";
-            User newUser = new User();
-            newUser.setChatId(chatId);
-            newUser.setUserName(name);
-            User save = userRepository.save(newUser);
+            createNewUser(chatId, name);
         }
 
         return message;
