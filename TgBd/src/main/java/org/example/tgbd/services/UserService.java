@@ -1,22 +1,27 @@
 package org.example.tgbd.services;
 
+import lombok.RequiredArgsConstructor;
+import org.example.tgbd.dto.UserDto;
+import org.example.tgbd.mapper.BotMapper;
+import org.example.tgbd.model.Repeat;
 import org.example.tgbd.model.User;
 import org.example.tgbd.model.UserRepository;
-import org.springframework.http.RequestEntity;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 
+import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.Optional;
+
 @Service
 @Transactional
+@RequiredArgsConstructor
 public class UserService {
 
     private final UserRepository userRepository;
+    private final BotMapper botMapper;
 
-    public UserService(UserRepository userRepository) {
-        this.userRepository = userRepository;
-    }
-
-    public Boolean createNew(Long chatId, String name) {
+    public Boolean createNewUser(Long chatId, String name) {
         if (userRepository.findById(chatId).isEmpty()) {
             User user = new User();
             user.setChatId(chatId);
@@ -26,4 +31,22 @@ public class UserService {
         }
         return false;
     }
+
+    public void setMessageToEntity(final Long chatId, final String name, final Long messageId,final String message){
+
+        Optional<User> user = userRepository.findById(chatId);
+
+        user.ifPresentOrElse(
+                (value)
+                        -> value.setRepeat(Arrays.asList(new Repeat(messageId, message))),
+                ()
+                        -> {
+                    User newUser = new User(chatId, name, Arrays.asList(new Repeat(messageId, message)));
+                    userRepository.save(newUser);
+                });
+    }
+
+
+
+
 }

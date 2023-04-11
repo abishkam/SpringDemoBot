@@ -1,7 +1,9 @@
 package org.example.tgservice.handler;
 
+import lombok.RequiredArgsConstructor;
 import org.example.tgbd.dto.RepeatDto;
 import org.springframework.stereotype.Service;
+import org.springframework.web.client.RestTemplate;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Message;
 
@@ -10,13 +12,10 @@ import java.util.List;
 import java.util.stream.Collectors;
 
 @Service("/getallmessages")
-
+@RequiredArgsConstructor
 public class GetAllMessagesHandler implements MessageHandler {
 
-//    private final UserRepository userRepository;
-
-    public GetAllMessagesHandler() {
-    }
+    //private final RestTemplate restTemplate;
 
     @Override
     public SendMessage send(Message message) {

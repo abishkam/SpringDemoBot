@@ -1,5 +1,6 @@
 package org.example.tgservice.config;
 
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.example.tgservice.TelegramBot;
 import org.springframework.context.event.ContextRefreshedEvent;
@@ -11,12 +12,10 @@ import org.telegram.telegrambots.updatesreceivers.DefaultBotSession;
 
 @Slf4j
 @Component
+@RequiredArgsConstructor
 public class BotInitializer {
-    private final TelegramBot telegramBot;
 
-    public BotInitializer(TelegramBot telegramBot) {
-        this.telegramBot = telegramBot;
-    }
+    private final TelegramBot telegramBot;
 
     @EventListener({ContextRefreshedEvent.class})
     public void init() throws TelegramApiException {

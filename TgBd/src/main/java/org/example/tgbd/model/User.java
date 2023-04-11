@@ -15,7 +15,7 @@ import lombok.Setter;
 
 import java.util.List;
 
-@Entity(name = "userTg")
+@Entity(name = "user_tg")
 @Getter
 @Setter
 @NoArgsConstructor
@@ -30,7 +30,6 @@ public class User {
             fetch = FetchType.EAGER)
     @JoinColumn(name = "user_id")
     private List<Repeat> repeat;
-
 
     @Override
     public String toString() {
