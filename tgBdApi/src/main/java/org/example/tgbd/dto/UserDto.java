@@ -9,5 +9,5 @@ public class UserDto {
 
     private Long chatId;
     private String userName;
-    private List<RepeatDto> repeat;
+    private List<RepeatDto> repeatDtos;
 }

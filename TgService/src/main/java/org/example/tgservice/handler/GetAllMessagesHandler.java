@@ -1,40 +1,29 @@
 package org.example.tgservice.handler;
 
-import org.example.tgbd.dto.RepeatDto;
+import lombok.RequiredArgsConstructor;
+import org.example.tgservice.patterns.HandlerTemplate;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Message;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.stream.Collectors;
+import java.util.Objects;
 
 @Service("/getallmessages")
-
+@RequiredArgsConstructor
 public class GetAllMessagesHandler implements MessageHandler {
 
-//    private final UserRepository userRepository;
-
-    public GetAllMessagesHandler() {
-    }
+    private final HandlerTemplate handlerTemplate;
 
     @Override
-    public SendMessage send(Message message) {
-        List<RepeatDto> repeatDtos = new ArrayList<>();
+    public SendMessage send(Message mes) {
 
-        //todo REST Template with Dto
-//                = botMapper.map(userRepository.findById(message.getChatId()).get().getRepeat());
+        String chatId = String.valueOf(mes.getChatId());
+        String name = mes.getChat().getUserName();
 
-        if (repeatDtos.isEmpty()) {
-            return new SendMessage(String.valueOf(message.getChatId()), "You don't have any stored messages");
-        }
+        ResponseEntity<String> allMessages = handlerTemplate.createResponse(String.class,"getAllMessages", chatId, name);
 
-        String allMessages =
-                repeatDtos
-                        .stream()
-                        .map(i -> i.getMessageId() + " " + i.getMessage())
-                        .collect(Collectors.joining("\n"));
-        return new SendMessage(String.valueOf(message.getChatId()), allMessages);
+        return new SendMessage(chatId, Objects.requireNonNull(allMessages.getBody()));
     }
 
 }
