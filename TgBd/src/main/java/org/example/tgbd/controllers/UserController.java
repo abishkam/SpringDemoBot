@@ -15,7 +15,7 @@ public class UserController {
     private final UserService userService;
 
     @GetMapping("/user/createUser/{id}/{name}")
-    public Boolean createUser(@PathVariable("id") Long id, @PathVariable("name") String name) {
+    public String createUser(@PathVariable("id") Long id, @PathVariable("name") String name) {
         UserDto userDto = new UserDto();
         userDto.setChatId(id);
         userDto.setUserName(name);
@@ -23,14 +23,20 @@ public class UserController {
     }
 
     @GetMapping("/user/setMessage/{chatId}/{name}/{messageId}/{message}")
-    public void setMessage(@PathVariable("chatId") Long chatId, @PathVariable("name") String name, @PathVariable("messageId") Long messageId, @PathVariable("message") String message) {
+    public String setMessage(@PathVariable("chatId") Long chatId,
+                             @PathVariable("name") String name,
+                             @PathVariable("messageId") Long messageId,
+                             @PathVariable("message") String message) {
+
         UserDto userDto = new UserDto();
         userDto.setChatId(chatId);
         userDto.setUserName(name);
+
         RepeatDto repeatDto = new RepeatDto();
         repeatDto.setMessageId(messageId);
         repeatDto.setMessage(message);
-        userService.setMessageToEntity(userDto, repeatDto);
+
+        return userService.setMessageToEntity(userDto, repeatDto);
     }
 
     @GetMapping("/user/getAllMessages/{chatId}/{name}")

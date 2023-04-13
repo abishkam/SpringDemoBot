@@ -17,4 +17,5 @@ public class Repeat {
     @Id
     private Long messageId;
     private String message;
+//    @OneToMany(targetEntity = TimeToRepeat.class, cascade = {CascadeType.PERSIST})
 }

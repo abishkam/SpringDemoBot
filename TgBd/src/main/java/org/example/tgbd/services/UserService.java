@@ -23,16 +23,16 @@ public class UserService {
     private final UserRepository userRepository;
     private final BotMapper botMapper;
 
-    public Boolean createNewUser(UserDto userDto) {
+    public String createNewUser(UserDto userDto) {
 
         if (userDto.getChatId() == null) {
-            User save = userRepository.save(botMapper.UserDtoToModel(userDto));
-            return true;
+            userRepository.save(botMapper.UserDtoToModel(userDto));
+            return "Hi, " + userDto.getUserName() + ", nice to meet you!";
         }
-        return false;
+        return "You were already registered";
     }
 
-    public void setMessageToEntity(final UserDto userDto, final RepeatDto repeatDto){
+    public String setMessageToEntity(final UserDto userDto, final RepeatDto repeatDto){
 
         Optional<User> user = userRepository.findById(userDto.getChatId());
         Repeat repeat = botMapper.RepeatDtoToModel(repeatDto);
@@ -44,6 +44,8 @@ public class UserService {
                     User newUser = new User(userDto.getChatId(), userDto.getUserName(), Collections.singletonList(repeat));
                     userRepository.save(newUser);
                 });
+
+        return "Id of a message - " + repeatDto.getMessageId();
 
     }
 

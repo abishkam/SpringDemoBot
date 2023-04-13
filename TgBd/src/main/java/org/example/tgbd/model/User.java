@@ -3,11 +3,9 @@ package org.example.tgbd.model;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
-import jakarta.persistence.FetchType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
 import jakarta.persistence.OneToMany;
-
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -26,8 +24,7 @@ public class User {
     private Long chatId;
     private String userName;
     @OneToMany(targetEntity = Repeat.class,
-            cascade = {CascadeType.PERSIST, CascadeType.MERGE, CascadeType.REFRESH},
-            fetch = FetchType.EAGER)
+            cascade = CascadeType.ALL)
     @JoinColumn(name = "user_id")
     private List<Repeat> repeat;
 

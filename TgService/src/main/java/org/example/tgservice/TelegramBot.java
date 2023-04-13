@@ -2,7 +2,6 @@ package org.example.tgservice;
 
 import lombok.extern.slf4j.Slf4j;
 import org.example.tgservice.handler.MessageHandler;
-import org.example.tgservice.handler.SendMessageHandler;
 import org.example.tgservice.patterns.BaseCommands;
 import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
@@ -12,21 +11,16 @@ import org.telegram.telegrambots.meta.api.objects.commands.scope.BotCommandScope
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 
 import java.util.Map;
-import java.util.Timer;
 
 @Component
 @Slf4j
 public class TelegramBot extends TelegramLongPollingBot {
 
-
-    private final SendMessageHandler sendMessageHandler;
     private final Map<String, MessageHandler> messageHandlerMap;
 
-    public TelegramBot(SendMessageHandler sendMessageHandler,
-                       BaseCommands baseCommands,
+    public TelegramBot(BaseCommands baseCommands,
                        Map<String, MessageHandler> messageHandlerMap) {
         super(System.getenv("bot.token"));
-        this.sendMessageHandler = sendMessageHandler;
         this.messageHandlerMap = messageHandlerMap;
         try {
             this.execute(new SetMyCommands(baseCommands.getListOfCommands(), new BotCommandScopeDefault(), null));
@@ -41,8 +35,6 @@ public class TelegramBot extends TelegramLongPollingBot {
         if (update.hasMessage() && update.getMessage().hasText()) {
 
             String messageText = update.getMessage().getText();
-            long chatId = update.getMessage().getChatId();
-            Timer timer = new Timer("Timer");
 
             MessageHandler messageHandler = messageHandlerMap.get(messageText.split(" ")[0]);
             try {
@@ -53,6 +45,8 @@ public class TelegramBot extends TelegramLongPollingBot {
 
         }
     }
+
+
 
 
     @Override

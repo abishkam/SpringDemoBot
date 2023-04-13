@@ -9,7 +9,7 @@ public class HandlerTemplate {
 
     private final RestTemplate restTemplate = new RestTemplate();
 
-    public <T> ResponseEntity<T> createResponse(Class<T> type, String action, String... variables){
+    public ResponseEntity<String> createResponse(String action, String... variables){
 
         StringBuilder urlPattern = new StringBuilder("http://localhost:8080/user/"+action);
         for (String obj: variables) {
@@ -17,7 +17,7 @@ public class HandlerTemplate {
             urlPattern.append(obj);
         }
 
-        return restTemplate.getForEntity(urlPattern.toString(), type);
+        return restTemplate.getForEntity(urlPattern.toString(), String.class);
     }
 
 }
