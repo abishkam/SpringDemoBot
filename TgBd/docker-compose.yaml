@@ -1,0 +1,27 @@
+version: '3'
+
+services:
+  app:
+    build:
+      context: .
+    container_name: app
+    depends_on:
+      - db
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/usertg
+    ports:
+      - 8000:8080
+
+  db:
+    image: 'postgres:13.1-alpine'
+    container_name: db
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=usertg
+      - PGDATA=/var/lib/postgresql/data/pgdata
+    ports:
+      - 6432:5432
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    restart: always
