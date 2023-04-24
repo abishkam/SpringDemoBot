@@ -1,12 +1,11 @@
 package org.example.tgbd.model;
 
-
 import jakarta.persistence.CascadeType;
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.Id;
 import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 import jakarta.persistence.OneToMany;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -16,31 +15,23 @@ import lombok.Setter;
 
 import java.util.List;
 
-@Entity(name = "user_tg")
+@Entity
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 @Builder
-public class User {
+public class Memorization {
 
     @Id
-    private Long chatId;
-    private String userName;
-    @OneToMany(targetEntity = Memorization.class,
+    private Long messageId;
+    private String message;
+    @OneToMany(targetEntity = Time.class,
             cascade = CascadeType.ALL,
             fetch = FetchType.EAGER)
+    @JoinColumn(name = "messageId")
+    private List<Time> timeList;
+    @ManyToOne
     @JoinColumn(name = "chatId")
-    private List<Memorization> memorizations;
-    @Column(columnDefinition = "varchar(255) default 'free'")
-    private String userState;
-
-    @Override
-    public String toString() {
-        return "User{"
-                + "chatId=" + chatId
-                + ", userName='" + userName + '\''
-                + ", memorizations=" + memorizations
-                + '}';
-    }
+    private User user;
 }

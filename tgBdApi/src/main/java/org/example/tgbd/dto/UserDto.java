@@ -7,7 +7,13 @@ import java.util.List;
 @Data
 public class UserDto {
 
+    //for bd
     private Long chatId;
     private String userName;
-    private List<RepeatDto> repeatDtos;
+    private List<MemorizationDto> memorizationDtos;
+
+    //for service
+    private String state;
+    private String timeState;
+    private short amount;
 }

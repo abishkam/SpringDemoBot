@@ -19,7 +19,7 @@ public class StartMessageHandler implements MessageHandler {
         var chatId = msg.getChatId();
         var chat = msg.getChat();
 
-        ResponseEntity<String> response =  handlerTemplate.createResponse("createUser", chatId.toString(), chat.getUserName());
+        ResponseEntity<String> response =  handlerTemplate.userResponse("createUser", chatId.toString(), chat.getUserName());
 
         return new SendMessage(String.valueOf(chatId), Objects.requireNonNull(response.getBody()));
 

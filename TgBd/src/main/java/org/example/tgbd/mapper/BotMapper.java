@@ -1,24 +1,59 @@
 package org.example.tgbd.mapper;
 
-import org.example.tgbd.dto.RepeatDto;
+import org.example.tgbd.dto.MemorizationDto;
+import org.example.tgbd.dto.TimeDto;
 import org.example.tgbd.dto.UserDto;
-import org.example.tgbd.model.Repeat;
+import org.example.tgbd.model.Memorization;
+import org.example.tgbd.model.Time;
 import org.example.tgbd.model.User;
 import org.mapstruct.Mapper;
+import org.mapstruct.Mapping;
 
 import java.util.List;
 
 @Mapper(componentModel = "spring")
 public interface BotMapper {
 
-    RepeatDto RepeatModelToDto(Repeat repeat);
+    @Mapping(target = "messageId", source = "messageId")
+    @Mapping(target = "message", source = "message")
+    @Mapping(target = "timeList", source = "timeList")
+    MemorizationDto MemorizationModelToDto(Memorization memorization);
 
-    Repeat RepeatDtoToModel(RepeatDto repeatDto);
+    @Mapping(target = "messageId", source = "messageId")
+    @Mapping(target = "message", source = "message")
+    @Mapping(target = "timeList", source = "timeList")
+    @Mapping(target = "user", ignore = true)
+    Memorization MemorizationDtoToModel(MemorizationDto memorizationDto);
 
+    @Mapping(target = "chatId", source = "chatId")
+    @Mapping(target = "userName", source = "userName")
+    @Mapping(target = "memorizationDtos", source = "memorizations")
+    @Mapping(target = "state", source = "userState")
+    @Mapping(target = "timeState", ignore = true)
+    @Mapping(target = "amount", ignore = true)
     UserDto UserModelToDto(User user);
 
+    @Mapping(target = "chatId", source = "chatId")
+    @Mapping(target = "userName", source = "userName")
+    @Mapping(target = "memorizations", source = "memorizationDtos")
+    @Mapping(target = "userState", source = "state")
     User UserDtoToModel(UserDto userDto);
 
-    List<RepeatDto> map(List<Repeat> repeat);
+    List<MemorizationDto> repeatMap(List<Memorization> memorizations);
+
+    @Mapping(target = "id", source = "id")
+    @Mapping(target = "unitOfTime", source = "unitOfTime")
+    @Mapping(target = "amount", source = "amount")
+    TimeDto TimeModelToDto(Time time);
+
+    @Mapping(target = "id", source = "id")
+    @Mapping(target = "unitOfTime", source = "unitOfTime")
+    @Mapping(target = "amount", source = "amount")
+    @Mapping(target = "memorization", ignore = true)
+    Time TimeDtoToModel(TimeDto timeDto);
+
+    List<TimeDto> timeDtoMap(List<Time> repeat);
+
+    List<Time> timeModelMap(List<TimeDto> repeat);
 
 }
