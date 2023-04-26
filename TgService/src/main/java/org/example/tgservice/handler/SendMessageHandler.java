@@ -3,16 +3,24 @@ package org.example.tgservice.handler;
 import com.vdurmont.emoji.EmojiParser;
 import jakarta.transaction.Transactional;
 import lombok.RequiredArgsConstructor;
+import org.example.tgservice.config.UserInitialization;
+import org.example.tgservice.keyboardMarkups.BaseButton;
 import org.example.tgservice.patterns.HandlerTemplate;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Service;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Message;
+
+
+import java.util.Objects;
 
 @Service("/send")
 @RequiredArgsConstructor
 public class SendMessageHandler implements MessageHandler {
 
     private final HandlerTemplate handlerTemplate;
+    private final BaseButton baseMarkup;
+    private final UserInitialization userInit;
 
     @Transactional
     public SendMessage send(Message mes) {
@@ -29,9 +37,14 @@ public class SendMessageHandler implements MessageHandler {
 
             var textToSend = EmojiParser.parseToUnicode(message.substring(mes.getText().indexOf(" ")));
 
-            handlerTemplate.createResponse(Void.class,"setMessage", chatId, name, messageId, textToSend);
+            ResponseEntity<String> response = handlerTemplate.memorizationResponse("setMessage", chatId, name, messageId, textToSend);
 
-            return new SendMessage(chatId, "Id of a message - " + messageId);
+            userInit.getUserDto().setState(messageId);
+
+            SendMessage answer = new SendMessage(chatId, Objects.requireNonNull(response.getBody()));
+            answer.setReplyMarkup(baseMarkup.inlineKeyboardMarkup());
+
+            return answer;
         }
 
     }

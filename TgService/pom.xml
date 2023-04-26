@@ -15,6 +15,8 @@
         <maven.compiler.source>18</maven.compiler.source>
         <maven.compiler.target>18</maven.compiler.target>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <org.tgBdApi.version>1.0-SNAPSHOT</org.tgBdApi.version>
+
     </properties>
 
     <dependencies>
@@ -24,9 +26,9 @@
         </dependency>
 
         <dependency>
-            <groupId>org.example</groupId>
+            <groupId>org.tgBdApi</groupId>
             <artifactId>tgBdApi</artifactId>
-            <version>1.0-SNAPSHOT</version>
+            <version>${org.tgBdApi.version}</version>
         </dependency>
 
         <dependency>
