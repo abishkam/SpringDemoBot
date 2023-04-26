@@ -1,0 +1,38 @@
+version: '3'
+
+services:
+  tgbd:
+    image: tgbd
+    build:
+      context: .
+    container_name: TgBd
+    depends_on:
+      - db
+    environment:
+      - SPRING_DATASOURCE_URL=jdbc:postgresql://db:5432/usertg
+      - spring.flyway.url=jdbc:postgresql://db:5432/usertg
+      - spring.jpa.hibernate.ddl-auto=update
+    ports:
+      - 8000:8080
+
+  tgservice:
+    image: tgservice
+    build:
+      context: .
+    container_name: TgService
+    ports:
+      - 8010:8090
+
+
+  db:
+    image: 'postgres:latest'
+    container_name: db
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=usertg
+    ports:
+      - 5432:5432
+    volumes:
+      - ./data:/var/lib/postgresql/new_data
+    restart: always
