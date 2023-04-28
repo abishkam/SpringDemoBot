@@ -1,3 +1,3 @@
 FROM openjdk:17
-COPY target/TgBd-1.0-SNAPSHOT.jar TgBd.jar
+COPY target/tgBdApi-1.0-SNAPSHOT.jar TgBd.jar
 ENTRYPOINT ["java", "-jar", "TgBd.jar"]
