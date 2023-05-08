@@ -1,29 +1,25 @@
 package org.example.tgservice.config;
 
 import lombok.Getter;
+import lombok.RequiredArgsConstructor;
 import lombok.Setter;
 import org.example.tgbd.dto.UserDto;
-import org.springframework.http.ResponseEntity;
+import org.example.tgservice.kafka.KafkaSender;
 import org.springframework.stereotype.Service;
-import org.springframework.web.client.RestTemplate;
-
-import java.util.Objects;
 
 @Service
 @Getter
 @Setter
+@RequiredArgsConstructor
 public class UserInitialization {
 
-    private final RestTemplate restTemplate = new RestTemplate();
+    private final KafkaSender kafkaSender;
     private UserDto userDto;
 
-    public UserDto findUser(Long id){
+    public UserDto findUser(Long id) {
 
-        if(userDto == null){
-            ResponseEntity<UserDto> userDtoResponse =
-                    restTemplate.getForEntity("http://localhost:8080/user/getUserById/"+id, UserDto.class);
-            this.userDto = userDtoResponse.getBody();
-            Objects.requireNonNull(userDto).setState("free");
+        if (userDto == null) {
+            kafkaSender.userResponse("getById", id.toString());
         }
         return userDto;
     }

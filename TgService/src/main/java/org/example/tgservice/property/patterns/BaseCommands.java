@@ -1,4 +1,4 @@
-package org.example.tgservice.patterns;
+package org.example.tgservice.property.patterns;
 
 import org.springframework.stereotype.Component;
 import org.telegram.telegrambots.meta.api.objects.commands.BotCommand;

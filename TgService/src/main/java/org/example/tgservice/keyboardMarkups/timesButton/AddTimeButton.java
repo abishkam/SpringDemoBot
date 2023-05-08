@@ -1,5 +1,6 @@
-package org.example.tgservice.keyboardMarkups;
+package org.example.tgservice.keyboardMarkups.timesButton;
 
+import org.example.tgservice.keyboardMarkups.Button;
 import org.springframework.stereotype.Service;
 import org.telegram.telegrambots.meta.api.methods.updatingmessages.EditMessageText;
 import org.telegram.telegrambots.meta.api.objects.Message;
@@ -12,11 +13,10 @@ import java.util.Collections;
 import java.util.List;
 
 @Service
-public class AddTimeButton implements Button{
+public class AddTimeButton implements Button {
 
-    public InlineKeyboardMarkup inlineKeyboardMarkup(){
+    public InlineKeyboardMarkup inlineKeyboardMarkup() {
         InlineKeyboardMarkup keyboardMarkup = new InlineKeyboardMarkup();
-
         var minutes = new InlineKeyboardButton();
         minutes.setText("Минуты");
         minutes.setCallbackData("minute");

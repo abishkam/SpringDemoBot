@@ -3,7 +3,7 @@ version: '3'
 services:
   app:
     build:
-      context: .
+      context: TgBd
     container_name: app
     depends_on:
       - db

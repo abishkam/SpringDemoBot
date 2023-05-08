@@ -1,6 +1,7 @@
 package org.example.tgbd.services;
 
 import lombok.RequiredArgsConstructor;
+import org.example.tgbd.dto.DtoKeeper;
 import org.example.tgbd.dto.UserDto;
 import org.example.tgbd.mapper.BotMapper;
 import org.example.tgbd.model.UserRepository;
@@ -25,8 +26,9 @@ public class UserService {
         return "You were already registered";
     }
 
+    public UserDto getById(DtoKeeper dtoKeeper) {
 
-
-
+        return botMapper.UserModelToDto(userRepository.findById(dtoKeeper.getUserDto().getChatId()).get());
+    }
 
 }

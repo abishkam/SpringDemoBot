@@ -7,14 +7,13 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.InlineKeyboardMa
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKeyboardButton;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
 @Service
 public class BaseButton implements Button {
 
-    public InlineKeyboardMarkup inlineKeyboardMarkup(){
+    public InlineKeyboardMarkup inlineKeyboardMarkup() {
 
         InlineKeyboardMarkup keyboardMarkup = new InlineKeyboardMarkup();
 
@@ -38,7 +37,7 @@ public class BaseButton implements Button {
         return null;
     }
 
-    public boolean support(String callback){
+    public boolean support(String callback) {
         return callback.equals("BaseButton");
     }
 }

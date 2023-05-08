@@ -1,7 +1,8 @@
-package org.example.tgservice.keyboardMarkups;
+package org.example.tgservice.keyboardMarkups.timesButton;
 
 import lombok.RequiredArgsConstructor;
 import org.example.tgservice.config.UserInitialization;
+import org.example.tgservice.keyboardMarkups.Button;
 import org.springframework.stereotype.Service;
 import org.telegram.telegrambots.meta.api.methods.updatingmessages.EditMessageText;
 import org.telegram.telegrambots.meta.api.objects.Message;
@@ -9,13 +10,13 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.InlineKeyboardMa
 
 @Service
 @RequiredArgsConstructor
-public class DaysButton implements Button{
+public class MonthButton implements Button {
 
     private final UserInitialization userInit;
 
     @Override
     public boolean support(String callback) {
-        return callback.equals("day");
+        return callback.equals("month");
     }
 
     @Override
@@ -30,10 +31,9 @@ public class DaysButton implements Button{
         editMessage.setText("Введите количество дней: ");
         editMessage.setMessageId(message.getMessageId());
 
-        userInit.getUserDto().setTimeState("day");
+        userInit.getUserDto().setTimeState("MONTHS");
 
         return editMessage;
     }
-
 
 }
