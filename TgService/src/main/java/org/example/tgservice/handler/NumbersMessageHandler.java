@@ -1,7 +1,6 @@
 package org.example.tgservice.handler;
 
 import lombok.RequiredArgsConstructor;
-import org.example.tgservice.config.UserInitialization;
 import org.example.tgservice.handler.interfaces.MessageHandler;
 import org.example.tgservice.kafka.KafkaSender;
 import org.springframework.stereotype.Service;
@@ -11,7 +10,6 @@ import org.telegram.telegrambots.meta.api.objects.Message;
 @RequiredArgsConstructor
 public class NumbersMessageHandler implements MessageHandler {
 
-    private final UserInitialization userInit;
     private final KafkaSender kafkaSender;
 
     public void repeater(Message message) {
@@ -22,15 +20,12 @@ public class NumbersMessageHandler implements MessageHandler {
 
        if (message.getText().matches("\\d+")) {
 
-            userInit.getUserDto().setAmount(Short.parseShort(message.getText()));
-            kafkaSender.timeResponse("setTimeToMemorization",
-                    userInit.getUserDto().getState(),
-                    userInit.getUserDto().getTimeState(),
-                    String.valueOf(userInit.getUserDto().getAmount()));
-            userInit.getUserDto().setState("free");
+//            kafkaSender.timeResponse("setTimeToMemorization",
+//                    message.getChatId(),
+//                    userInit.getUserDto().getState(),
+//                    userInit.getUserDto().getTimeState(),
+//                    String.valueOf(userInit.getUserDto().getAmount()));
 
-       } else {
-           kafkaSender.patternResponse("notNumber", "Введите число");
        }
 
     }

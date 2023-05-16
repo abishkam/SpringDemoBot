@@ -1,7 +1,6 @@
 package org.example.tgservice;
 
 import lombok.extern.slf4j.Slf4j;
-import org.example.tgservice.config.UserInitialization;
 import org.example.tgservice.handler.CommandHandler;
 import org.example.tgservice.keyboardMarkups.Button;
 import org.example.tgservice.property.patterns.BaseCommands;
@@ -23,15 +22,13 @@ public class TelegramBot extends TelegramLongPollingBot {
 
     private final List<Button> buttons;
     private final CommandHandler commandHandler;
-    private final UserInitialization userInitialization;
 
     public TelegramBot(BaseCommands baseCommands,
                        List<Button> buttons,
-                       CommandHandler commandHandler, UserInitialization userInitialization) {
+                       CommandHandler commandHandler) {
         super(System.getenv("bot.token"));
         this.buttons = buttons;
         this.commandHandler = commandHandler;
-        this.userInitialization = userInitialization;
         try {
             this.execute(new SetMyCommands(baseCommands.getListOfCommands(), new BotCommandScopeDefault(), null));
         } catch (TelegramApiException e) {
@@ -42,14 +39,8 @@ public class TelegramBot extends TelegramLongPollingBot {
     @Override
     public void onUpdateReceived(Update update) {
 
-        if (update.getMessage().getText().equals("/start")) {
-            userInitialization.findUser(update.getMessage().getChatId());
-        }
-
         if (update.hasMessage() && update.getMessage().hasText()) {
-
             commandHandler.handler(update.getMessage());
-
         }
 
         if (update.hasCallbackQuery()) {

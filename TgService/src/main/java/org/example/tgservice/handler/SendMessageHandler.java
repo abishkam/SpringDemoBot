@@ -18,19 +18,17 @@ public class SendMessageHandler implements MessageHandler {
 
     public void kafkaSender(Message mes) {
 
-        String chatId = String.valueOf(mes.getChatId());
-        String name = mes.getChat().getUserName();
-        String messageId = String.valueOf(mes.getMessageId());
         String message = mes.getText();
 
-
-        if (mes.getText().trim().equals("/send")) {
-            kafkaSender.patternResponse("emptyMessage",  "You didn't write message");
+        if (message.trim().equals("/send")) {
+            kafkaSender.patternResponse("emptyMessage",  mes.getChatId(), "You didn't write message");
         } else {
+
+            String messageId = String.valueOf(mes.getMessageId());
 
             var textToSend = message.substring(mes.getText().indexOf(" "));
 
-            kafkaSender.memorizationResponse("setInformation", chatId, name, messageId, textToSend);
+            kafkaSender.memorizationResponse("setInformation", mes.getChatId(), messageId, textToSend);
 
         }
     }

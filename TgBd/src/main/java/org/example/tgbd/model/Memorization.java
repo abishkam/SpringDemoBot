@@ -34,4 +34,5 @@ public class Memorization {
     @ManyToOne
     @JoinColumn(name = "chatId")
     private User user;
+
 }

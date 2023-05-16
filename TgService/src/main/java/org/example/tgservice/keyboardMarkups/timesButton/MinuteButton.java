@@ -1,7 +1,7 @@
 package org.example.tgservice.keyboardMarkups.timesButton;
 
 import lombok.RequiredArgsConstructor;
-import org.example.tgservice.config.UserInitialization;
+import org.example.tgservice.kafka.KafkaSender;
 import org.example.tgservice.keyboardMarkups.Button;
 import org.springframework.stereotype.Service;
 import org.telegram.telegrambots.meta.api.methods.updatingmessages.EditMessageText;
@@ -12,7 +12,7 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.InlineKeyboardMa
 @RequiredArgsConstructor
 public class MinuteButton implements Button {
 
-    private final UserInitialization userInit;
+    private final KafkaSender kafkaSender;
 
     @Override
     public boolean support(String callback) {
@@ -26,12 +26,13 @@ public class MinuteButton implements Button {
 
     @Override
     public EditMessageText edit(Message message) {
+
         EditMessageText editMessage = new EditMessageText();
         editMessage.setChatId(message.getChatId().toString());
         editMessage.setText("Введите количество минут: ");
         editMessage.setMessageId(message.getMessageId());
 
-        userInit.getUserDto().setTimeState("MINUTES");
+        kafkaSender.timeResponse("setTimeToMemorization", message.getChatId(), message.getMessageId(), "MINUTES");
 
         return editMessage;
     }

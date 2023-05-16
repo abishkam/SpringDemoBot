@@ -18,9 +18,8 @@ public class StartMessageHandler implements MessageHandler {
 
     public void kafkaSender(Message msg) {
         var chatId = msg.getChatId();
-        var chat = msg.getChat();
 
-        kafkaSender.userResponse("createUser", chatId.toString(), chat.getUserName());
+        kafkaSender.userResponse("createUser", chatId);
 
     }
 

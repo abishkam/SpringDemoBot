@@ -19,10 +19,12 @@ public class HelpMessageHandler implements MessageHandler {
     }
 
     public void kafkaSender(Message message) {
-        kafkaSender.patternResponse("helpMessage", information.helpMessage());
+
+        kafkaSender.patternResponse("helpMessage", message.getChatId(),information.helpMessage());
     }
 
     public boolean support(String message) {
+
         return message.equals("/help");
     }
 

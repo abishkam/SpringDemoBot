@@ -13,21 +13,14 @@ public class KafkaSender {
 
     private final KafkaTemplate<String, DtoKeeper> kafkaTemplate;
 
-    public void userResponse(String action, String... variables) {
+    public void userResponse(String action, Long chatId) {
         UserDto user = null;
         if (action.equals("createUser")) {
             user = UserDto.builder()
-                    .chatId(Long.parseLong(variables[0]))
-                    .userName(variables[1])
+                    .chatId(chatId)
                     .state("free")
                     .build();
 
-        } else if (action.equals("getById")) {
-
-            user = UserDto.builder()
-                    .chatId(Long.parseLong(variables[0]))
-                    .state("free")
-                    .build();
         }
 
         DtoKeeper dtoKeeper = DtoKeeper.builder()
@@ -35,21 +28,21 @@ public class KafkaSender {
                 .className("userKafkaController")
                 .methodName(action)
                 .build();
+
         kafkaTemplate.send("bdTopic", dtoKeeper);
     }
 
-    public void memorizationResponse(String action, String... variables) {
+    public void memorizationResponse(String action, Long chatId, String messageId, String textToSend) {
+
+        UserDto user = UserDto.builder()
+                .chatId(chatId)
+                .build();
 
         if (action.equals("setInformation")) {
-            UserDto user = UserDto.builder()
-                    .chatId(Long.parseLong(variables[0]))
-                    .userName(variables[1])
-                    .state("free")
-                    .build();
 
             MemorizationDto memorizationDto = MemorizationDto.builder()
-                    .messageId(Long.parseLong(variables[2]))
-                    .message(variables[3])
+                    .messageId(Long.parseLong(messageId))
+                    .message(textToSend)
                     .build();
 
             DtoKeeper dtoKeeper = DtoKeeper.builder()
@@ -59,12 +52,7 @@ public class KafkaSender {
                     .methodName(action)
                     .build();
             kafkaTemplate.send("bdTopic", dtoKeeper);
-        } else if (action.equals("getAllInformation")) {
-            UserDto user = UserDto.builder()
-                    .chatId(Long.parseLong(variables[0]))
-                    .userName(variables[1])
-                    .state("free")
-                    .build();
+        } else if (action.equals("getallmessages")) {
 
             DtoKeeper dtoKeeper = DtoKeeper.builder()
                     .userDto(user)
@@ -77,13 +65,11 @@ public class KafkaSender {
 
     }
 
-    public void timeResponse(String action, String... variables) {
+    public void timeResponse(String action, Long chatId, Integer messageId, String unitOfTime) {
 
         if(action.equals("setTimeToMemorization")) {
             UserDto user = UserDto.builder()
-                    .state(variables[0])
-                    .timeState(variables[1])
-                    .amount(Short.parseShort(variables[2]))
+                    .chatId(chatId)
                     .build();
 
             DtoKeeper dtoKeeper = DtoKeeper.builder()
@@ -95,23 +81,23 @@ public class KafkaSender {
         }
     }
 
-    public void patternResponse(String action, String... variables) {
+    public void patternResponse(String action, Long chatId, String... variables) {
 
         if (action.equals("emptyMessage")) {
             DtoKeeper dtoKeeper = DtoKeeper.builder()
                     .message(variables[0])
                     .build();
-            kafkaTemplate.send("tgService", dtoKeeper);
+            kafkaTemplate.send("serviceTopic", dtoKeeper);
         } else if (action.equals("notNumber")) {
             DtoKeeper dtoKeeper = DtoKeeper.builder()
                     .message(variables[0])
                     .build();
-            kafkaTemplate.send("tgService", dtoKeeper);
+            kafkaTemplate.send("serviceTopic", dtoKeeper);
         } else if (action.equals("helpMessage")) {
             DtoKeeper dtoKeeper = DtoKeeper.builder()
                     .message(variables[0])
                     .build();
-            kafkaTemplate.send("tgService", dtoKeeper);
+            kafkaTemplate.send("serviceTopic", dtoKeeper);
         }
     }
 

@@ -1,0 +1,1295 @@
+2023-05-16T03:04:11.794+03:00  INFO 15216 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Node 1 disconnected.
+2023-05-16T03:04:11.805+03:00  INFO 15216 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Cancelled in-flight FETCH request with correlation id 28485 due to node 1 being disconnected (elapsed time since creation: 10801885ms, elapsed time since send: 10801885ms, request timeout: 30000ms)
+2023-05-16T03:04:11.806+03:00  INFO 15216 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Disconnecting from node 2147483646 due to request timeout.
+2023-05-16T03:04:12.028+03:00  INFO 15216 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Cancelled in-flight HEARTBEAT request with correlation id 28486 due to node 2147483646 being disconnected (elapsed time since creation: 10801324ms, elapsed time since send: 10801324ms, request timeout: 30000ms)
+2023-05-16T03:04:12.029+03:00  INFO 15216 --- [kafka-coordinator-heartbeat-thread | myGroup] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: null. isDisconnected: true. Rediscovery will be attempted.
+2023-05-16T03:04:12.029+03:00  INFO 15216 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.clients.FetchSessionHandler    : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Error sending fetch request (sessionId=1519396175, epoch=24352) to node 1:
+
+org.apache.kafka.common.errors.DisconnectException: null
+
+2023-05-16T03:04:12.551+03:00  INFO 15216 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2023-05-16T07:59:39.607+03:00  INFO 15216 --- [kafka-coordinator-heartbeat-thread | myGroup] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Node 1 disconnected.
+2023-05-16T07:59:40.049+03:00  INFO 15216 --- [kafka-coordinator-heartbeat-thread | myGroup] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Cancelled in-flight FETCH request with correlation id 28495 due to node 1 being disconnected (elapsed time since creation: 17725533ms, elapsed time since send: 17725533ms, request timeout: 30000ms)
+2023-05-16T07:59:40.049+03:00  INFO 15216 --- [kafka-coordinator-heartbeat-thread | myGroup] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Cancelled in-flight METADATA request with correlation id 28497 due to node 1 being disconnected (elapsed time since creation: 0ms, elapsed time since send: 0ms, request timeout: 30000ms)
+2023-05-16T07:59:40.049+03:00  INFO 15216 --- [kafka-coordinator-heartbeat-thread | myGroup] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Disconnecting from node 2147483646 due to request timeout.
+2023-05-16T07:59:40.050+03:00  INFO 15216 --- [kafka-coordinator-heartbeat-thread | myGroup] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Cancelled in-flight HEARTBEAT request with correlation id 28496 due to node 2147483646 being disconnected (elapsed time since creation: 17723886ms, elapsed time since send: 17723886ms, request timeout: 30000ms)
+2023-05-16T07:59:40.051+03:00  INFO 15216 --- [kafka-coordinator-heartbeat-thread | myGroup] o.a.kafka.clients.FetchSessionHandler    : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Error sending fetch request (sessionId=1673923824, epoch=3) to node 1:
+
+org.apache.kafka.common.errors.DisconnectException: null
+
+2023-05-16T07:59:40.052+03:00  INFO 15216 --- [kafka-coordinator-heartbeat-thread | myGroup] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: null. isDisconnected: true. Rediscovery will be attempted.
+2023-05-16T07:59:41.136+03:00  INFO 15216 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2023-05-16T07:59:42.431+03:00  INFO 15216 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 1 disconnected.
+2023-05-16T07:59:47.176+03:00  WARN 15216 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=7h55m56s6ms275µs700ns).
+2023-05-16T10:14:05.488+03:00  INFO 15216 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Node 2147483646 disconnected.
+2023-05-16T10:14:05.488+03:00  INFO 15216 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Cancelled in-flight HEARTBEAT request with correlation id 28828 due to node 2147483646 being disconnected (elapsed time since creation: 7919707ms, elapsed time since send: 7919707ms, request timeout: 30000ms)
+2023-05-16T10:14:05.489+03:00  INFO 15216 --- [kafka-coordinator-heartbeat-thread | myGroup] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: true. Rediscovery will be attempted.
+2023-05-16T10:14:05.511+03:00  INFO 15216 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2023-05-16T10:14:12.245+03:00  INFO 15216 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 1 disconnected.
+2023-05-16T10:14:16.893+03:00  WARN 15216 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=2h12m30s907ms535µs300ns).
+2023-05-16T11:51:26.561+03:00  INFO 15216 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Node 1 disconnected.
+2023-05-16T11:51:26.562+03:00  INFO 15216 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Cancelled in-flight FETCH request with correlation id 40459 due to node 1 being disconnected (elapsed time since creation: 836599ms, elapsed time since send: 836599ms, request timeout: 30000ms)
+2023-05-16T11:51:26.562+03:00  INFO 15216 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Disconnecting from node 2147483646 due to request timeout.
+2023-05-16T11:51:26.563+03:00  INFO 15216 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Cancelled in-flight HEARTBEAT request with correlation id 40460 due to node 2147483646 being disconnected (elapsed time since creation: 835867ms, elapsed time since send: 835867ms, request timeout: 30000ms)
+2023-05-16T11:51:26.563+03:00  INFO 15216 --- [kafka-coordinator-heartbeat-thread | myGroup] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: null. isDisconnected: true. Rediscovery will be attempted.
+2023-05-16T11:51:26.563+03:00  INFO 15216 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.clients.FetchSessionHandler    : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Error sending fetch request (sessionId=1496318749, epoch=10224) to node 1:
+
+org.apache.kafka.common.errors.DisconnectException: null
+
+2023-05-16T11:51:27.601+03:00  INFO 15216 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2023-05-16T11:51:36.058+03:00  INFO 15216 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 1 disconnected.
+2023-05-16T11:51:41.712+03:00  WARN 15216 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=14m23s513ms548µs800ns).
+2023-05-16T14:13:34.578+03:00  INFO 15216 --- [kafka-coordinator-heartbeat-thread | myGroup] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Node 1 disconnected.
+2023-05-16T14:13:34.579+03:00  INFO 15216 --- [kafka-coordinator-heartbeat-thread | myGroup] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Cancelled in-flight FETCH request with correlation id 53843 due to node 1 being disconnected (elapsed time since creation: 2769688ms, elapsed time since send: 2769688ms, request timeout: 30000ms)
+2023-05-16T14:13:34.579+03:00  INFO 15216 --- [kafka-coordinator-heartbeat-thread | myGroup] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Cancelled in-flight METADATA request with correlation id 53845 due to node 1 being disconnected (elapsed time since creation: 1ms, elapsed time since send: 1ms, request timeout: 30000ms)
+2023-05-16T14:13:34.580+03:00  INFO 15216 --- [kafka-coordinator-heartbeat-thread | myGroup] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Disconnecting from node 2147483646 due to request timeout.
+2023-05-16T14:13:34.580+03:00  INFO 15216 --- [kafka-coordinator-heartbeat-thread | myGroup] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Cancelled in-flight HEARTBEAT request with correlation id 53844 due to node 2147483646 being disconnected (elapsed time since creation: 2766894ms, elapsed time since send: 2766894ms, request timeout: 30000ms)
+2023-05-16T14:13:34.580+03:00  INFO 15216 --- [kafka-coordinator-heartbeat-thread | myGroup] o.a.kafka.clients.FetchSessionHandler    : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Error sending fetch request (sessionId=1918055489, epoch=11444) to node 1:
+
+org.apache.kafka.common.errors.DisconnectException: null
+
+2023-05-16T14:13:34.581+03:00  INFO 15216 --- [kafka-coordinator-heartbeat-thread | myGroup] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: null. isDisconnected: true. Rediscovery will be attempted.
+2023-05-16T14:13:35.655+03:00  INFO 15216 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2023-05-16T14:13:43.047+03:00  INFO 15216 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 1 disconnected.
+2023-05-16T14:13:49.938+03:00  WARN 15216 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=46m36s692ms405µs500ns).
+2023-05-16T14:46:30.625+03:00  INFO 15216 --- [kafka-coordinator-heartbeat-thread | myGroup] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: session timed out without receiving a heartbeat response. isDisconnected: false. Rediscovery will be attempted.
+2023-05-16T14:46:30.625+03:00  INFO 15216 --- [kafka-coordinator-heartbeat-thread | myGroup] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2023-05-16T14:46:30.626+03:00  INFO 15216 --- [kafka-coordinator-heartbeat-thread | myGroup] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Client requested disconnect from node 2147483646
+2023-05-16T14:46:30.639+03:00  INFO 15216 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2023-05-16T14:46:30.640+03:00  INFO 15216 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Group coordinator localhost:9092 (id: 2147483646 rack: null) is unavailable or invalid due to cause: coordinator unavailable. isDisconnected: false. Rediscovery will be attempted.
+2023-05-16T14:46:30.640+03:00  INFO 15216 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Requesting disconnect from last known coordinator localhost:9092 (id: 2147483646 rack: null)
+2023-05-16T14:46:30.752+03:00  INFO 15216 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2023-05-16T14:46:38.714+03:00  INFO 15216 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node 1 disconnected.
+2023-05-16T14:46:45.703+03:00  WARN 15216 --- [HikariPool-1 housekeeper] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=17m55s535ms293µs300ns).
+2023-05-16T14:46:47.157+03:00  INFO 15216 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Revoke previously assigned partitions bdTopic-0
+2023-05-16T14:46:47.158+03:00  INFO 15216 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : myGroup: partitions revoked: [bdTopic-0]
+2023-05-16T14:46:47.158+03:00  INFO 15216 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Member consumer-myGroup-1-7de353a5-98b8-4cc5-abc8-477e646912ff sending LeaveGroup request to coordinator localhost:9092 (id: 2147483646 rack: null) due to the consumer unsubscribed from all topics
+2023-05-16T14:46:47.160+03:00  INFO 15216 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Resetting generation and member id due to: consumer pro-actively leaving the group
+2023-05-16T14:46:47.160+03:00  INFO 15216 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Request joining group due to: consumer pro-actively leaving the group
+2023-05-16T14:46:47.160+03:00  INFO 15216 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Unsubscribed all topics or patterns and assigned partitions
+2023-05-16T14:46:47.161+03:00  INFO 15216 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Resetting generation and member id due to: consumer pro-actively leaving the group
+2023-05-16T14:46:47.161+03:00  INFO 15216 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Request joining group due to: consumer pro-actively leaving the group
+2023-05-16T14:46:47.172+03:00  INFO 15216 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2023-05-16T14:46:47.172+03:00  INFO 15216 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-05-16T14:46:47.173+03:00  INFO 15216 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2023-05-16T14:46:47.179+03:00  INFO 15216 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-myGroup-1 unregistered
+2023-05-16T14:46:47.181+03:00  INFO 15216 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : myGroup: Consumer stopped
+2023-05-16T14:46:47.250+03:00  INFO 15216 --- [SpringApplicationShutdownHook] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms.
+2023-05-16T14:46:47.252+03:00  INFO 15216 --- [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2023-05-16T14:46:47.253+03:00  INFO 15216 --- [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-05-16T14:46:47.253+03:00  INFO 15216 --- [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2023-05-16T14:46:47.253+03:00  INFO 15216 --- [SpringApplicationShutdownHook] o.a.kafka.common.utils.AppInfoParser     : App info kafka.producer for producer-1 unregistered
+2023-05-16T14:46:47.256+03:00  INFO 15216 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-05-16T14:46:47.273+03:00  INFO 15216 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-05-16T14:46:47.276+03:00  INFO 15216 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-05-16T18:22:48.918+03:00  INFO 13876 --- [main] org.example.tgbd.TgBdApplication         : Starting TgBdApplication using Java 18.0.2.1 with PID 13876 (D:\apps\SpringDemoBot\TgBd\target\classes started by HP in D:\apps\SpringDemoBot)
+2023-05-16T18:22:48.920+03:00  INFO 13876 --- [main] org.example.tgbd.TgBdApplication         : No active profile set, falling back to 1 default profile: "default"
+2023-05-16T18:22:49.586+03:00  INFO 13876 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-16T18:22:49.643+03:00  INFO 13876 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 50 ms. Found 3 JPA repository interfaces.
+2023-05-16T18:22:49.860+03:00  INFO 13876 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=83d324c6-b49b-3bad-b7a5-821913974366
+2023-05-16T18:22:50.193+03:00  INFO 13876 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-05-16T18:22:50.201+03:00  INFO 13876 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-05-16T18:22:50.202+03:00  INFO 13876 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-05-16T18:22:50.294+03:00  INFO 13876 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-05-16T18:22:50.295+03:00  INFO 13876 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1330 ms
+2023-05-16T18:22:50.472+03:00  INFO 13876 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.16.3 by Redgate
+2023-05-16T18:22:50.473+03:00  INFO 13876 --- [main] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
+2023-05-16T18:22:50.473+03:00  INFO 13876 --- [main] o.f.c.internal.license.VersionPrinter    : 
+2023-05-16T18:22:50.642+03:00  INFO 13876 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:postgresql://localhost:5432/usertg (PostgreSQL 15.2)
+2023-05-16T18:22:50.701+03:00  INFO 13876 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.038s)
+2023-05-16T18:22:50.760+03:00  INFO 13876 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "members": 1
+2023-05-16T18:22:50.761+03:00  INFO 13876 --- [main] o.f.core.internal.command.DbMigrate      : Schema "members" is up to date. No migration necessary.
+2023-05-16T18:22:50.833+03:00  INFO 13876 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-16T18:22:50.882+03:00  INFO 13876 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-05-16T18:22:51.121+03:00  INFO 13876 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-05-16T18:22:51.174+03:00  INFO 13876 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@29fcfc54
+2023-05-16T18:22:51.175+03:00  INFO 13876 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-05-16T18:22:51.204+03:00  INFO 13876 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-05-16T18:22:51.944+03:00  INFO 13876 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-16T18:22:51.951+03:00  INFO 13876 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-16T18:22:52.287+03:00  WARN 13876 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-05-16T18:22:52.828+03:00  INFO 13876 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-05-16T18:22:52.955+03:00  INFO 13876 --- [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-myGroup-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = myGroup
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2023-05-16T18:22:53.047+03:00  INFO 13876 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.3.2
+2023-05-16T18:22:53.048+03:00  INFO 13876 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: b66af662e61082cb
+2023-05-16T18:22:53.048+03:00  INFO 13876 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1684250573046
+2023-05-16T18:22:53.052+03:00  INFO 13876 --- [main] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Subscribed to topic(s): bdTopic
+2023-05-16T18:22:53.068+03:00  INFO 13876 --- [main] org.example.tgbd.TgBdApplication         : Started TgBdApplication in 4.732 seconds (process running for 5.474)
+2023-05-16T18:22:53.458+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Resetting the last seen epoch of partition bdTopic-0 to 0 since the associated topicId changed from null to AnEnWPb4T1GvxDWRqCIXiw
+2023-05-16T18:22:53.459+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Cluster ID: 6-dzyk6yQS2LSe4o7Pk_Ew
+2023-05-16T18:22:53.468+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2023-05-16T18:22:53.470+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] (Re-)joining group
+2023-05-16T18:22:53.503+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Request joining group due to: need to re-join with the given member-id: consumer-myGroup-1-4f5d9b80-0a13-4d11-8d49-07c466ebe84f
+2023-05-16T18:22:53.504+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+2023-05-16T18:22:53.504+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] (Re-)joining group
+2023-05-16T18:22:56.521+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Successfully joined group with generation Generation{generationId=29, memberId='consumer-myGroup-1-4f5d9b80-0a13-4d11-8d49-07c466ebe84f', protocol='range'}
+2023-05-16T18:22:56.523+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Finished assignment for group at generation 29: {consumer-myGroup-1-4f5d9b80-0a13-4d11-8d49-07c466ebe84f=Assignment(partitions=[bdTopic-0])}
+2023-05-16T18:22:56.560+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Successfully synced group in generation Generation{generationId=29, memberId='consumer-myGroup-1-4f5d9b80-0a13-4d11-8d49-07c466ebe84f', protocol='range'}
+2023-05-16T18:22:56.561+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Notifying assignor about the new Assignment(partitions=[bdTopic-0])
+2023-05-16T18:22:56.563+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Adding newly assigned partitions: bdTopic-0
+2023-05-16T18:22:56.579+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Setting offset for partition bdTopic-0 to the committed offset FetchPosition{offset=17, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=0}}
+2023-05-16T18:22:56.580+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : myGroup: partitions assigned: [bdTopic-0]
+2023-05-16T18:23:11.545+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Request joining group due to: group is already rebalancing
+2023-05-16T18:23:11.546+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Revoke previously assigned partitions bdTopic-0
+2023-05-16T18:23:11.546+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : myGroup: partitions revoked: [bdTopic-0]
+2023-05-16T18:23:11.546+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] (Re-)joining group
+2023-05-16T18:23:11.552+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Successfully joined group with generation Generation{generationId=30, memberId='consumer-myGroup-1-4f5d9b80-0a13-4d11-8d49-07c466ebe84f', protocol='range'}
+2023-05-16T18:23:11.823+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Resetting the last seen epoch of partition serviceTopic-0 to 0 since the associated topicId changed from null to adxQoqD4R2WuGZc2Xq86dg
+2023-05-16T18:23:11.824+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Finished assignment for group at generation 30: {consumer-myGroup-1-7743b00e-515a-4b91-b018-9a9fefa6472b=Assignment(partitions=[serviceTopic-0]), consumer-myGroup-1-4f5d9b80-0a13-4d11-8d49-07c466ebe84f=Assignment(partitions=[bdTopic-0])}
+2023-05-16T18:23:11.829+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Successfully synced group in generation Generation{generationId=30, memberId='consumer-myGroup-1-4f5d9b80-0a13-4d11-8d49-07c466ebe84f', protocol='range'}
+2023-05-16T18:23:11.829+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Notifying assignor about the new Assignment(partitions=[bdTopic-0])
+2023-05-16T18:23:11.830+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Adding newly assigned partitions: bdTopic-0
+2023-05-16T18:23:11.836+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Setting offset for partition bdTopic-0 to the committed offset FetchPosition{offset=17, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=0}}
+2023-05-16T18:23:11.837+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : myGroup: partitions assigned: [bdTopic-0]
+2023-05-16T18:31:53.677+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Node -1 disconnected.
+2023-05-16T18:49:35.396+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = -1
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.springframework.kafka.support.serializer.JsonSerializer
+
+2023-05-16T18:49:35.406+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Instantiated an idempotent producer.
+2023-05-16T18:49:35.420+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.3.2
+2023-05-16T18:49:35.420+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: b66af662e61082cb
+2023-05-16T18:49:35.420+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1684252175420
+2023-05-16T18:49:35.431+03:00  INFO 13876 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Resetting the last seen epoch of partition serviceTopic-0 to 0 since the associated topicId changed from null to adxQoqD4R2WuGZc2Xq86dg
+2023-05-16T18:49:35.432+03:00  INFO 13876 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Cluster ID: 6-dzyk6yQS2LSe4o7Pk_Ew
+2023-05-16T18:49:35.432+03:00  INFO 13876 --- [kafka-producer-network-thread | producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-1] ProducerId set to 14 with epoch 0
+2023-05-16T18:52:19.138+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Request joining group due to: group is already rebalancing
+2023-05-16T18:52:19.138+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Revoke previously assigned partitions bdTopic-0
+2023-05-16T18:52:19.138+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : myGroup: partitions revoked: [bdTopic-0]
+2023-05-16T18:52:19.138+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] (Re-)joining group
+2023-05-16T18:52:19.142+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Successfully joined group with generation Generation{generationId=31, memberId='consumer-myGroup-1-4f5d9b80-0a13-4d11-8d49-07c466ebe84f', protocol='range'}
+2023-05-16T18:52:19.142+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Finished assignment for group at generation 31: {consumer-myGroup-1-4f5d9b80-0a13-4d11-8d49-07c466ebe84f=Assignment(partitions=[bdTopic-0])}
+2023-05-16T18:52:19.147+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Successfully synced group in generation Generation{generationId=31, memberId='consumer-myGroup-1-4f5d9b80-0a13-4d11-8d49-07c466ebe84f', protocol='range'}
+2023-05-16T18:52:19.147+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Notifying assignor about the new Assignment(partitions=[bdTopic-0])
+2023-05-16T18:52:19.147+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Adding newly assigned partitions: bdTopic-0
+2023-05-16T18:52:19.154+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Setting offset for partition bdTopic-0 to the committed offset FetchPosition{offset=18, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=0}}
+2023-05-16T18:52:19.154+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : myGroup: partitions assigned: [bdTopic-0]
+2023-05-16T18:53:28.291+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Request joining group due to: group is already rebalancing
+2023-05-16T18:53:28.292+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Revoke previously assigned partitions bdTopic-0
+2023-05-16T18:53:28.292+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : myGroup: partitions revoked: [bdTopic-0]
+2023-05-16T18:53:28.292+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] (Re-)joining group
+2023-05-16T18:53:28.295+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Successfully joined group with generation Generation{generationId=32, memberId='consumer-myGroup-1-4f5d9b80-0a13-4d11-8d49-07c466ebe84f', protocol='range'}
+2023-05-16T18:53:28.723+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Finished assignment for group at generation 32: {consumer-myGroup-1-d058957e-c969-4929-8cff-9e159440973d=Assignment(partitions=[serviceTopic-0]), consumer-myGroup-1-4f5d9b80-0a13-4d11-8d49-07c466ebe84f=Assignment(partitions=[bdTopic-0])}
+2023-05-16T18:53:28.727+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Successfully synced group in generation Generation{generationId=32, memberId='consumer-myGroup-1-4f5d9b80-0a13-4d11-8d49-07c466ebe84f', protocol='range'}
+2023-05-16T18:53:28.728+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Notifying assignor about the new Assignment(partitions=[bdTopic-0])
+2023-05-16T18:53:28.728+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Adding newly assigned partitions: bdTopic-0
+2023-05-16T18:53:28.733+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Setting offset for partition bdTopic-0 to the committed offset FetchPosition{offset=18, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=0}}
+2023-05-16T18:53:28.733+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : myGroup: partitions assigned: [bdTopic-0]
+2023-05-16T18:53:52.375+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Request joining group due to: group is already rebalancing
+2023-05-16T18:53:52.376+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Revoke previously assigned partitions bdTopic-0
+2023-05-16T18:53:52.377+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : myGroup: partitions revoked: [bdTopic-0]
+2023-05-16T18:53:52.377+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] (Re-)joining group
+2023-05-16T18:53:52.380+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Successfully joined group with generation Generation{generationId=33, memberId='consumer-myGroup-1-4f5d9b80-0a13-4d11-8d49-07c466ebe84f', protocol='range'}
+2023-05-16T18:53:52.380+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Finished assignment for group at generation 33: {consumer-myGroup-1-4f5d9b80-0a13-4d11-8d49-07c466ebe84f=Assignment(partitions=[bdTopic-0])}
+2023-05-16T18:53:52.385+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Successfully synced group in generation Generation{generationId=33, memberId='consumer-myGroup-1-4f5d9b80-0a13-4d11-8d49-07c466ebe84f', protocol='range'}
+2023-05-16T18:53:52.385+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Notifying assignor about the new Assignment(partitions=[bdTopic-0])
+2023-05-16T18:53:52.386+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Adding newly assigned partitions: bdTopic-0
+2023-05-16T18:53:52.391+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Setting offset for partition bdTopic-0 to the committed offset FetchPosition{offset=20, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=0}}
+2023-05-16T18:53:52.391+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : myGroup: partitions assigned: [bdTopic-0]
+2023-05-16T18:57:04.806+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Request joining group due to: group is already rebalancing
+2023-05-16T18:57:04.807+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Revoke previously assigned partitions bdTopic-0
+2023-05-16T18:57:04.807+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : myGroup: partitions revoked: [bdTopic-0]
+2023-05-16T18:57:04.807+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] (Re-)joining group
+2023-05-16T18:57:04.811+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Successfully joined group with generation Generation{generationId=34, memberId='consumer-myGroup-1-4f5d9b80-0a13-4d11-8d49-07c466ebe84f', protocol='range'}
+2023-05-16T18:57:04.881+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Finished assignment for group at generation 34: {consumer-myGroup-1-e3a2357e-9b83-4cd1-8bf7-8724b3925321=Assignment(partitions=[serviceTopic-0]), consumer-myGroup-1-4f5d9b80-0a13-4d11-8d49-07c466ebe84f=Assignment(partitions=[bdTopic-0])}
+2023-05-16T18:57:04.886+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Successfully synced group in generation Generation{generationId=34, memberId='consumer-myGroup-1-4f5d9b80-0a13-4d11-8d49-07c466ebe84f', protocol='range'}
+2023-05-16T18:57:04.887+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Notifying assignor about the new Assignment(partitions=[bdTopic-0])
+2023-05-16T18:57:04.887+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Adding newly assigned partitions: bdTopic-0
+2023-05-16T18:57:04.892+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Setting offset for partition bdTopic-0 to the committed offset FetchPosition{offset=20, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=0}}
+2023-05-16T18:57:04.893+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : myGroup: partitions assigned: [bdTopic-0]
+2023-05-16T18:57:46.911+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Request joining group due to: group is already rebalancing
+2023-05-16T18:57:46.912+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Revoke previously assigned partitions bdTopic-0
+2023-05-16T18:57:46.912+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : myGroup: partitions revoked: [bdTopic-0]
+2023-05-16T18:57:46.912+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] (Re-)joining group
+2023-05-16T18:57:46.915+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Successfully joined group with generation Generation{generationId=35, memberId='consumer-myGroup-1-4f5d9b80-0a13-4d11-8d49-07c466ebe84f', protocol='range'}
+2023-05-16T18:57:46.915+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Finished assignment for group at generation 35: {consumer-myGroup-1-4f5d9b80-0a13-4d11-8d49-07c466ebe84f=Assignment(partitions=[bdTopic-0])}
+2023-05-16T18:57:46.918+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Successfully synced group in generation Generation{generationId=35, memberId='consumer-myGroup-1-4f5d9b80-0a13-4d11-8d49-07c466ebe84f', protocol='range'}
+2023-05-16T18:57:46.918+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Notifying assignor about the new Assignment(partitions=[bdTopic-0])
+2023-05-16T18:57:46.919+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Adding newly assigned partitions: bdTopic-0
+2023-05-16T18:57:46.922+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Setting offset for partition bdTopic-0 to the committed offset FetchPosition{offset=21, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=0}}
+2023-05-16T18:57:46.923+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : myGroup: partitions assigned: [bdTopic-0]
+2023-05-16T18:58:07.986+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Request joining group due to: group is already rebalancing
+2023-05-16T18:58:07.986+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Revoke previously assigned partitions bdTopic-0
+2023-05-16T18:58:07.986+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : myGroup: partitions revoked: [bdTopic-0]
+2023-05-16T18:58:07.986+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] (Re-)joining group
+2023-05-16T18:58:07.990+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Successfully joined group with generation Generation{generationId=36, memberId='consumer-myGroup-1-4f5d9b80-0a13-4d11-8d49-07c466ebe84f', protocol='range'}
+2023-05-16T18:58:08.325+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Finished assignment for group at generation 36: {consumer-myGroup-1-20f64660-95f6-43d1-a2c4-36b0fb5cd364=Assignment(partitions=[serviceTopic-0]), consumer-myGroup-1-4f5d9b80-0a13-4d11-8d49-07c466ebe84f=Assignment(partitions=[bdTopic-0])}
+2023-05-16T18:58:08.329+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Successfully synced group in generation Generation{generationId=36, memberId='consumer-myGroup-1-4f5d9b80-0a13-4d11-8d49-07c466ebe84f', protocol='range'}
+2023-05-16T18:58:08.329+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Notifying assignor about the new Assignment(partitions=[bdTopic-0])
+2023-05-16T18:58:08.329+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Adding newly assigned partitions: bdTopic-0
+2023-05-16T18:58:08.334+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Setting offset for partition bdTopic-0 to the committed offset FetchPosition{offset=21, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=0}}
+2023-05-16T18:58:08.334+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : myGroup: partitions assigned: [bdTopic-0]
+2023-05-16T18:58:29.053+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Request joining group due to: group is already rebalancing
+2023-05-16T18:58:29.053+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Revoke previously assigned partitions bdTopic-0
+2023-05-16T18:58:29.053+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : myGroup: partitions revoked: [bdTopic-0]
+2023-05-16T18:58:29.053+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] (Re-)joining group
+2023-05-16T18:58:29.057+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Successfully joined group with generation Generation{generationId=37, memberId='consumer-myGroup-1-4f5d9b80-0a13-4d11-8d49-07c466ebe84f', protocol='range'}
+2023-05-16T18:58:29.058+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Finished assignment for group at generation 37: {consumer-myGroup-1-4f5d9b80-0a13-4d11-8d49-07c466ebe84f=Assignment(partitions=[bdTopic-0])}
+2023-05-16T18:58:29.062+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Successfully synced group in generation Generation{generationId=37, memberId='consumer-myGroup-1-4f5d9b80-0a13-4d11-8d49-07c466ebe84f', protocol='range'}
+2023-05-16T18:58:29.063+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Notifying assignor about the new Assignment(partitions=[bdTopic-0])
+2023-05-16T18:58:29.063+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Adding newly assigned partitions: bdTopic-0
+2023-05-16T18:58:29.068+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Setting offset for partition bdTopic-0 to the committed offset FetchPosition{offset=22, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=0}}
+2023-05-16T18:58:29.068+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : myGroup: partitions assigned: [bdTopic-0]
+2023-05-16T18:58:51.776+03:00  INFO 13876 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.
+2023-05-16T19:00:11.211+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Revoke previously assigned partitions bdTopic-0
+2023-05-16T19:00:11.211+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : myGroup: partitions revoked: [bdTopic-0]
+2023-05-16T19:00:11.211+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Member consumer-myGroup-1-4f5d9b80-0a13-4d11-8d49-07c466ebe84f sending LeaveGroup request to coordinator localhost:9092 (id: 2147483646 rack: null) due to the consumer unsubscribed from all topics
+2023-05-16T19:00:11.212+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Resetting generation and member id due to: consumer pro-actively leaving the group
+2023-05-16T19:00:11.212+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Request joining group due to: consumer pro-actively leaving the group
+2023-05-16T19:00:11.212+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Unsubscribed all topics or patterns and assigned partitions
+2023-05-16T19:00:11.212+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Resetting generation and member id due to: consumer pro-actively leaving the group
+2023-05-16T19:00:11.212+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Request joining group due to: consumer pro-actively leaving the group
+2023-05-16T19:00:11.218+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2023-05-16T19:00:11.218+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-05-16T19:00:11.218+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2023-05-16T19:00:11.220+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.common.utils.AppInfoParser     : App info kafka.consumer for consumer-myGroup-1 unregistered
+2023-05-16T19:00:11.221+03:00  INFO 13876 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : myGroup: Consumer stopped
+2023-05-16T19:00:11.237+03:00  INFO 13876 --- [SpringApplicationShutdownHook] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Closing the Kafka producer with timeoutMillis = 30000 ms.
+2023-05-16T19:00:11.239+03:00  INFO 13876 --- [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Metrics scheduler closed
+2023-05-16T19:00:11.239+03:00  INFO 13876 --- [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2023-05-16T19:00:11.239+03:00  INFO 13876 --- [SpringApplicationShutdownHook] o.apache.kafka.common.metrics.Metrics    : Metrics reporters closed
+2023-05-16T19:00:11.239+03:00  INFO 13876 --- [SpringApplicationShutdownHook] o.a.kafka.common.utils.AppInfoParser     : App info kafka.producer for producer-1 unregistered
+2023-05-16T19:00:11.240+03:00  INFO 13876 --- [SpringApplicationShutdownHook] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-05-16T19:00:11.242+03:00  INFO 13876 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2023-05-16T19:00:11.244+03:00  INFO 13876 --- [SpringApplicationShutdownHook] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2023-05-16T19:00:15.850+03:00  INFO 11996 --- [main] org.example.tgbd.TgBdApplication         : Starting TgBdApplication using Java 18.0.2.1 with PID 11996 (D:\apps\SpringDemoBot\TgBd\target\classes started by HP in D:\apps\SpringDemoBot)
+2023-05-16T19:00:15.853+03:00  INFO 11996 --- [main] org.example.tgbd.TgBdApplication         : No active profile set, falling back to 1 default profile: "default"
+2023-05-16T19:00:16.502+03:00  INFO 11996 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-05-16T19:00:16.562+03:00  INFO 11996 --- [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 54 ms. Found 3 JPA repository interfaces.
+2023-05-16T19:00:16.752+03:00  INFO 11996 --- [main] o.s.cloud.context.scope.GenericScope     : BeanFactory id=83d324c6-b49b-3bad-b7a5-821913974366
+2023-05-16T19:00:17.051+03:00  INFO 11996 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8080 (http)
+2023-05-16T19:00:17.059+03:00  INFO 11996 --- [main] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2023-05-16T19:00:17.059+03:00  INFO 11996 --- [main] o.apache.catalina.core.StandardEngine    : Starting Servlet engine: [Apache Tomcat/10.1.7]
+2023-05-16T19:00:17.138+03:00  INFO 11996 --- [main] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2023-05-16T19:00:17.138+03:00  INFO 11996 --- [main] w.s.c.ServletWebServerApplicationContext : Root WebApplicationContext: initialization completed in 1237 ms
+2023-05-16T19:00:17.290+03:00  INFO 11996 --- [main] o.f.c.internal.license.VersionPrinter    : Flyway Community Edition 9.16.3 by Redgate
+2023-05-16T19:00:17.290+03:00  INFO 11996 --- [main] o.f.c.internal.license.VersionPrinter    : See release notes here: https://rd.gt/416ObMi
+2023-05-16T19:00:17.290+03:00  INFO 11996 --- [main] o.f.c.internal.license.VersionPrinter    : 
+2023-05-16T19:00:17.423+03:00  INFO 11996 --- [main] o.f.c.i.database.base.BaseDatabaseType   : Database: jdbc:postgresql://localhost:5432/usertg (PostgreSQL 15.2)
+2023-05-16T19:00:17.459+03:00  INFO 11996 --- [main] o.f.core.internal.command.DbValidate     : Successfully validated 2 migrations (execution time 00:00.022s)
+2023-05-16T19:00:17.515+03:00  INFO 11996 --- [main] o.f.core.internal.command.DbMigrate      : Current version of schema "members": 1
+2023-05-16T19:00:17.516+03:00  INFO 11996 --- [main] o.f.core.internal.command.DbMigrate      : Schema "members" is up to date. No migration necessary.
+2023-05-16T19:00:17.587+03:00  INFO 11996 --- [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-05-16T19:00:17.620+03:00  INFO 11996 --- [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.1.7.Final
+2023-05-16T19:00:17.806+03:00  INFO 11996 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2023-05-16T19:00:17.859+03:00  INFO 11996 --- [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@3f322610
+2023-05-16T19:00:17.861+03:00  INFO 11996 --- [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2023-05-16T19:00:17.882+03:00  INFO 11996 --- [main] SQL dialect                              : HHH000400: Using dialect: org.hibernate.dialect.PostgreSQLDialect
+2023-05-16T19:00:18.560+03:00  INFO 11996 --- [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-05-16T19:00:18.569+03:00  INFO 11996 --- [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-05-16T19:00:18.874+03:00  WARN 11996 --- [main] JpaBaseConfiguration$JpaWebConfiguration : spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-05-16T19:00:19.392+03:00  INFO 11996 --- [main] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8080 (http) with context path ''
+2023-05-16T19:00:19.512+03:00  INFO 11996 --- [main] o.a.k.clients.consumer.ConsumerConfig    : ConsumerConfig values: 
+	allow.auto.create.topics = true
+	auto.commit.interval.ms = 5000
+	auto.offset.reset = latest
+	bootstrap.servers = [localhost:9092]
+	check.crcs = true
+	client.dns.lookup = use_all_dns_ips
+	client.id = consumer-myGroup-1
+	client.rack = 
+	connections.max.idle.ms = 540000
+	default.api.timeout.ms = 60000
+	enable.auto.commit = false
+	exclude.internal.topics = true
+	fetch.max.bytes = 52428800
+	fetch.max.wait.ms = 500
+	fetch.min.bytes = 1
+	group.id = myGroup
+	group.instance.id = null
+	heartbeat.interval.ms = 3000
+	interceptor.classes = []
+	internal.leave.group.on.close = true
+	internal.throw.on.fetch.stable.offset.unsupported = false
+	isolation.level = read_uncommitted
+	key.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+	max.partition.fetch.bytes = 1048576
+	max.poll.interval.ms = 300000
+	max.poll.records = 500
+	metadata.max.age.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partition.assignment.strategy = [class org.apache.kafka.clients.consumer.RangeAssignor, class org.apache.kafka.clients.consumer.CooperativeStickyAssignor]
+	receive.buffer.bytes = 65536
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	session.timeout.ms = 45000
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	value.deserializer = class org.apache.kafka.common.serialization.StringDeserializer
+
+2023-05-16T19:00:19.586+03:00  INFO 11996 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.3.2
+2023-05-16T19:00:19.586+03:00  INFO 11996 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: b66af662e61082cb
+2023-05-16T19:00:19.586+03:00  INFO 11996 --- [main] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1684252819585
+2023-05-16T19:00:19.589+03:00  INFO 11996 --- [main] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Subscribed to topic(s): bdTopic
+2023-05-16T19:00:19.601+03:00  INFO 11996 --- [main] org.example.tgbd.TgBdApplication         : Started TgBdApplication in 4.34 seconds (process running for 5.065)
+2023-05-16T19:00:19.879+03:00  INFO 11996 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Resetting the last seen epoch of partition bdTopic-0 to 0 since the associated topicId changed from null to AnEnWPb4T1GvxDWRqCIXiw
+2023-05-16T19:00:19.881+03:00  INFO 11996 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Cluster ID: 6-dzyk6yQS2LSe4o7Pk_Ew
+2023-05-16T19:00:19.882+03:00  INFO 11996 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Discovered group coordinator localhost:9092 (id: 2147483646 rack: null)
+2023-05-16T19:00:19.884+03:00  INFO 11996 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] (Re-)joining group
+2023-05-16T19:00:19.901+03:00  INFO 11996 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Request joining group due to: need to re-join with the given member-id: consumer-myGroup-1-745005dd-e0c9-4a9c-b13b-b416f7c377d8
+2023-05-16T19:00:19.901+03:00  INFO 11996 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Request joining group due to: rebalance failed due to 'The group member needs to have a valid member id before actually entering a consumer group.' (MemberIdRequiredException)
+2023-05-16T19:00:19.901+03:00  INFO 11996 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] (Re-)joining group
+2023-05-16T19:00:22.907+03:00  INFO 11996 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Successfully joined group with generation Generation{generationId=39, memberId='consumer-myGroup-1-745005dd-e0c9-4a9c-b13b-b416f7c377d8', protocol='range'}
+2023-05-16T19:00:22.909+03:00  INFO 11996 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Finished assignment for group at generation 39: {consumer-myGroup-1-745005dd-e0c9-4a9c-b13b-b416f7c377d8=Assignment(partitions=[bdTopic-0])}
+2023-05-16T19:00:22.917+03:00  INFO 11996 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Successfully synced group in generation Generation{generationId=39, memberId='consumer-myGroup-1-745005dd-e0c9-4a9c-b13b-b416f7c377d8', protocol='range'}
+2023-05-16T19:00:22.918+03:00  INFO 11996 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Notifying assignor about the new Assignment(partitions=[bdTopic-0])
+2023-05-16T19:00:22.921+03:00  INFO 11996 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Adding newly assigned partitions: bdTopic-0
+2023-05-16T19:00:22.934+03:00  INFO 11996 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Setting offset for partition bdTopic-0 to the committed offset FetchPosition{offset=22, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=0}}
+2023-05-16T19:00:22.936+03:00  INFO 11996 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : myGroup: partitions assigned: [bdTopic-0]
+2023-05-16T19:00:28.933+03:00  INFO 11996 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Request joining group due to: group is already rebalancing
+2023-05-16T19:00:28.934+03:00  INFO 11996 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Revoke previously assigned partitions bdTopic-0
+2023-05-16T19:00:28.935+03:00  INFO 11996 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : myGroup: partitions revoked: [bdTopic-0]
+2023-05-16T19:00:28.935+03:00  INFO 11996 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] (Re-)joining group
+2023-05-16T19:00:28.940+03:00  INFO 11996 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Successfully joined group with generation Generation{generationId=40, memberId='consumer-myGroup-1-745005dd-e0c9-4a9c-b13b-b416f7c377d8', protocol='range'}
+2023-05-16T19:00:29.002+03:00  INFO 11996 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.Metadata        : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Resetting the last seen epoch of partition serviceTopic-0 to 0 since the associated topicId changed from null to adxQoqD4R2WuGZc2Xq86dg
+2023-05-16T19:00:29.003+03:00  INFO 11996 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Finished assignment for group at generation 40: {consumer-myGroup-1-931d6cf2-7da2-4e1d-9119-093847300b02=Assignment(partitions=[serviceTopic-0]), consumer-myGroup-1-745005dd-e0c9-4a9c-b13b-b416f7c377d8=Assignment(partitions=[bdTopic-0])}
+2023-05-16T19:00:29.008+03:00  INFO 11996 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Successfully synced group in generation Generation{generationId=40, memberId='consumer-myGroup-1-745005dd-e0c9-4a9c-b13b-b416f7c377d8', protocol='range'}
+2023-05-16T19:00:29.009+03:00  INFO 11996 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Notifying assignor about the new Assignment(partitions=[bdTopic-0])
+2023-05-16T19:00:29.009+03:00  INFO 11996 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Adding newly assigned partitions: bdTopic-0
+2023-05-16T19:00:29.015+03:00  INFO 11996 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Setting offset for partition bdTopic-0 to the committed offset FetchPosition{offset=22, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=0}}
+2023-05-16T19:00:29.016+03:00  INFO 11996 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : myGroup: partitions assigned: [bdTopic-0]
+2023-05-16T19:00:49.111+03:00  INFO 11996 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.clients.producer.ProducerConfig    : ProducerConfig values: 
+	acks = -1
+	batch.size = 16384
+	bootstrap.servers = [localhost:9092]
+	buffer.memory = 33554432
+	client.dns.lookup = use_all_dns_ips
+	client.id = producer-1
+	compression.type = none
+	connections.max.idle.ms = 540000
+	delivery.timeout.ms = 120000
+	enable.idempotence = true
+	interceptor.classes = []
+	key.serializer = class org.apache.kafka.common.serialization.StringSerializer
+	linger.ms = 0
+	max.block.ms = 60000
+	max.in.flight.requests.per.connection = 5
+	max.request.size = 1048576
+	metadata.max.age.ms = 300000
+	metadata.max.idle.ms = 300000
+	metric.reporters = []
+	metrics.num.samples = 2
+	metrics.recording.level = INFO
+	metrics.sample.window.ms = 30000
+	partitioner.adaptive.partitioning.enable = true
+	partitioner.availability.timeout.ms = 0
+	partitioner.class = null
+	partitioner.ignore.keys = false
+	receive.buffer.bytes = 32768
+	reconnect.backoff.max.ms = 1000
+	reconnect.backoff.ms = 50
+	request.timeout.ms = 30000
+	retries = 2147483647
+	retry.backoff.ms = 100
+	sasl.client.callback.handler.class = null
+	sasl.jaas.config = null
+	sasl.kerberos.kinit.cmd = /usr/bin/kinit
+	sasl.kerberos.min.time.before.relogin = 60000
+	sasl.kerberos.service.name = null
+	sasl.kerberos.ticket.renew.jitter = 0.05
+	sasl.kerberos.ticket.renew.window.factor = 0.8
+	sasl.login.callback.handler.class = null
+	sasl.login.class = null
+	sasl.login.connect.timeout.ms = null
+	sasl.login.read.timeout.ms = null
+	sasl.login.refresh.buffer.seconds = 300
+	sasl.login.refresh.min.period.seconds = 60
+	sasl.login.refresh.window.factor = 0.8
+	sasl.login.refresh.window.jitter = 0.05
+	sasl.login.retry.backoff.max.ms = 10000
+	sasl.login.retry.backoff.ms = 100
+	sasl.mechanism = GSSAPI
+	sasl.oauthbearer.clock.skew.seconds = 30
+	sasl.oauthbearer.expected.audience = null
+	sasl.oauthbearer.expected.issuer = null
+	sasl.oauthbearer.jwks.endpoint.refresh.ms = 3600000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.max.ms = 10000
+	sasl.oauthbearer.jwks.endpoint.retry.backoff.ms = 100
+	sasl.oauthbearer.jwks.endpoint.url = null
+	sasl.oauthbearer.scope.claim.name = scope
+	sasl.oauthbearer.sub.claim.name = sub
+	sasl.oauthbearer.token.endpoint.url = null
+	security.protocol = PLAINTEXT
+	security.providers = null
+	send.buffer.bytes = 131072
+	socket.connection.setup.timeout.max.ms = 30000
+	socket.connection.setup.timeout.ms = 10000
+	ssl.cipher.suites = null
+	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
+	ssl.endpoint.identification.algorithm = https
+	ssl.engine.factory.class = null
+	ssl.key.password = null
+	ssl.keymanager.algorithm = SunX509
+	ssl.keystore.certificate.chain = null
+	ssl.keystore.key = null
+	ssl.keystore.location = null
+	ssl.keystore.password = null
+	ssl.keystore.type = JKS
+	ssl.protocol = TLSv1.3
+	ssl.provider = null
+	ssl.secure.random.implementation = null
+	ssl.trustmanager.algorithm = PKIX
+	ssl.truststore.certificates = null
+	ssl.truststore.location = null
+	ssl.truststore.password = null
+	ssl.truststore.type = JKS
+	transaction.timeout.ms = 60000
+	transactional.id = null
+	value.serializer = class org.springframework.kafka.support.serializer.JsonSerializer
+
+2023-05-16T19:00:49.123+03:00  INFO 11996 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.clients.producer.KafkaProducer     : [Producer clientId=producer-1] Instantiated an idempotent producer.
+2023-05-16T19:00:49.137+03:00  INFO 11996 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.common.utils.AppInfoParser     : Kafka version: 3.3.2
+2023-05-16T19:00:49.137+03:00  INFO 11996 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.common.utils.AppInfoParser     : Kafka commitId: b66af662e61082cb
+2023-05-16T19:00:49.138+03:00  INFO 11996 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.kafka.common.utils.AppInfoParser     : Kafka startTimeMs: 1684252849137
+2023-05-16T19:00:49.148+03:00  INFO 11996 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Resetting the last seen epoch of partition serviceTopic-0 to 0 since the associated topicId changed from null to adxQoqD4R2WuGZc2Xq86dg
+2023-05-16T19:00:49.148+03:00  INFO 11996 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.Metadata        : [Producer clientId=producer-1] Cluster ID: 6-dzyk6yQS2LSe4o7Pk_Ew
+2023-05-16T19:00:49.148+03:00  INFO 11996 --- [kafka-producer-network-thread | producer-1] o.a.k.c.p.internals.TransactionManager   : [Producer clientId=producer-1] ProducerId set to 19 with epoch 0
+2023-05-16T19:01:10.700+03:00  INFO 11996 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Seeking to offset 23 for partition bdTopic-0
+2023-05-16T19:01:10.701+03:00 ERROR 11996 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : Error handler threw an exception
+
+org.springframework.kafka.KafkaException: Seek to current after exception
+	at org.springframework.kafka.listener.SeekUtils.seekOrRecover(SeekUtils.java:208) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.DefaultErrorHandler.handleRemaining(DefaultErrorHandler.java:174) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeErrorHandler(KafkaMessageListenerContainer.java:2916) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.lambda$doInvokeRecordListener$56(KafkaMessageListenerContainer.java:2794) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at io.micrometer.observation.Observation.observe(Observation.java:559) ~[micrometer-observation-1.10.5.jar:1.10.5]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeRecordListener(KafkaMessageListenerContainer.java:2781) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeWithRecords(KafkaMessageListenerContainer.java:2633) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeRecordListener(KafkaMessageListenerContainer.java:2519) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeListener(KafkaMessageListenerContainer.java:2171) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeIfHaveRecords(KafkaMessageListenerContainer.java:1526) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1490) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:1365) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+Caused by: org.springframework.kafka.listener.ListenerExecutionFailedException: Listener method 'void org.example.tgbd.kafka.KafkaListeners.listener(java.lang.String)' threw exception
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.decorateException(KafkaMessageListenerContainer.java:2949) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2894) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeOnMessage(KafkaMessageListenerContainer.java:2860) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.lambda$doInvokeRecordListener$56(KafkaMessageListenerContainer.java:2783) ~[spring-kafka-3.0.4.jar:3.0.4]
+	... 10 common frames omitted
+	Suppressed: org.springframework.kafka.listener.ListenerExecutionFailedException: Restored Stack Trace
+		at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:382) ~[spring-kafka-3.0.4.jar:3.0.4]
+		at org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:92) ~[spring-kafka-3.0.4.jar:3.0.4]
+		at org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:53) ~[spring-kafka-3.0.4.jar:3.0.4]
+		at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2880) ~[spring-kafka-3.0.4.jar:3.0.4]
+Caused by: java.lang.NumberFormatException: Cannot parse null string
+	at java.base/java.lang.Long.parseLong(Long.java:674) ~[na:na]
+	at java.base/java.lang.Long.valueOf(Long.java:1159) ~[na:na]
+	at org.example.tgbd.services.TimeService.setTime(TimeService.java:28) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-6.0.7.jar:6.0.7]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:391) ~[spring-tx-6.0.7.jar:6.0.7]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.0.7.jar:6.0.7]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:702) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.example.tgbd.services.TimeService$$SpringCGLIB$$0.setTime(<generated>) ~[classes/:na]
+	at org.example.tgbd.kafkacontroller.TimeKafkaSender.setTimeToMemorization(TimeKafkaSender.java:18) ~[classes/:na]
+	at org.example.tgbd.kafkacontroller.TimeKafkaSender.request(TimeKafkaSender.java:34) ~[classes/:na]
+	at org.example.tgbd.kafka.KafkaListeners.listener(KafkaListeners.java:32) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:169) ~[spring-messaging-6.0.7.jar:6.0.7]
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:119) ~[spring-messaging-6.0.7.jar:6.0.7]
+	at org.springframework.kafka.listener.adapter.HandlerAdapter.invoke(HandlerAdapter.java:56) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:366) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:92) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:53) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2880) ~[spring-kafka-3.0.4.jar:3.0.4]
+	... 12 common frames omitted
+
+2023-05-16T19:01:11.203+03:00  INFO 11996 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Seeking to offset 23 for partition bdTopic-0
+2023-05-16T19:01:11.203+03:00 ERROR 11996 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : Error handler threw an exception
+
+org.springframework.kafka.KafkaException: Seek to current after exception
+	at org.springframework.kafka.listener.SeekUtils.seekOrRecover(SeekUtils.java:208) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.DefaultErrorHandler.handleRemaining(DefaultErrorHandler.java:174) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeErrorHandler(KafkaMessageListenerContainer.java:2916) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.lambda$doInvokeRecordListener$56(KafkaMessageListenerContainer.java:2794) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at io.micrometer.observation.Observation.observe(Observation.java:559) ~[micrometer-observation-1.10.5.jar:1.10.5]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeRecordListener(KafkaMessageListenerContainer.java:2781) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeWithRecords(KafkaMessageListenerContainer.java:2633) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeRecordListener(KafkaMessageListenerContainer.java:2519) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeListener(KafkaMessageListenerContainer.java:2171) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeIfHaveRecords(KafkaMessageListenerContainer.java:1526) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1490) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:1365) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+Caused by: org.springframework.kafka.listener.ListenerExecutionFailedException: Listener method 'void org.example.tgbd.kafka.KafkaListeners.listener(java.lang.String)' threw exception
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.decorateException(KafkaMessageListenerContainer.java:2949) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2894) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeOnMessage(KafkaMessageListenerContainer.java:2860) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.lambda$doInvokeRecordListener$56(KafkaMessageListenerContainer.java:2783) ~[spring-kafka-3.0.4.jar:3.0.4]
+	... 10 common frames omitted
+	Suppressed: org.springframework.kafka.listener.ListenerExecutionFailedException: Restored Stack Trace
+		at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:382) ~[spring-kafka-3.0.4.jar:3.0.4]
+		at org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:92) ~[spring-kafka-3.0.4.jar:3.0.4]
+		at org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:53) ~[spring-kafka-3.0.4.jar:3.0.4]
+		at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2880) ~[spring-kafka-3.0.4.jar:3.0.4]
+Caused by: java.lang.NumberFormatException: Cannot parse null string
+	at java.base/java.lang.Long.parseLong(Long.java:674) ~[na:na]
+	at java.base/java.lang.Long.valueOf(Long.java:1159) ~[na:na]
+	at org.example.tgbd.services.TimeService.setTime(TimeService.java:28) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-6.0.7.jar:6.0.7]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:391) ~[spring-tx-6.0.7.jar:6.0.7]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.0.7.jar:6.0.7]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:702) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.example.tgbd.services.TimeService$$SpringCGLIB$$0.setTime(<generated>) ~[classes/:na]
+	at org.example.tgbd.kafkacontroller.TimeKafkaSender.setTimeToMemorization(TimeKafkaSender.java:18) ~[classes/:na]
+	at org.example.tgbd.kafkacontroller.TimeKafkaSender.request(TimeKafkaSender.java:34) ~[classes/:na]
+	at org.example.tgbd.kafka.KafkaListeners.listener(KafkaListeners.java:32) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:169) ~[spring-messaging-6.0.7.jar:6.0.7]
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:119) ~[spring-messaging-6.0.7.jar:6.0.7]
+	at org.springframework.kafka.listener.adapter.HandlerAdapter.invoke(HandlerAdapter.java:56) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:366) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:92) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:53) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2880) ~[spring-kafka-3.0.4.jar:3.0.4]
+	... 12 common frames omitted
+
+2023-05-16T19:01:11.700+03:00  INFO 11996 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Seeking to offset 23 for partition bdTopic-0
+2023-05-16T19:01:11.700+03:00 ERROR 11996 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : Error handler threw an exception
+
+org.springframework.kafka.KafkaException: Seek to current after exception
+	at org.springframework.kafka.listener.SeekUtils.seekOrRecover(SeekUtils.java:208) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.DefaultErrorHandler.handleRemaining(DefaultErrorHandler.java:174) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeErrorHandler(KafkaMessageListenerContainer.java:2916) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.lambda$doInvokeRecordListener$56(KafkaMessageListenerContainer.java:2794) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at io.micrometer.observation.Observation.observe(Observation.java:559) ~[micrometer-observation-1.10.5.jar:1.10.5]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeRecordListener(KafkaMessageListenerContainer.java:2781) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeWithRecords(KafkaMessageListenerContainer.java:2633) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeRecordListener(KafkaMessageListenerContainer.java:2519) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeListener(KafkaMessageListenerContainer.java:2171) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeIfHaveRecords(KafkaMessageListenerContainer.java:1526) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1490) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:1365) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+Caused by: org.springframework.kafka.listener.ListenerExecutionFailedException: Listener method 'void org.example.tgbd.kafka.KafkaListeners.listener(java.lang.String)' threw exception
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.decorateException(KafkaMessageListenerContainer.java:2949) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2894) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeOnMessage(KafkaMessageListenerContainer.java:2860) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.lambda$doInvokeRecordListener$56(KafkaMessageListenerContainer.java:2783) ~[spring-kafka-3.0.4.jar:3.0.4]
+	... 10 common frames omitted
+	Suppressed: org.springframework.kafka.listener.ListenerExecutionFailedException: Restored Stack Trace
+		at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:382) ~[spring-kafka-3.0.4.jar:3.0.4]
+		at org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:92) ~[spring-kafka-3.0.4.jar:3.0.4]
+		at org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:53) ~[spring-kafka-3.0.4.jar:3.0.4]
+		at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2880) ~[spring-kafka-3.0.4.jar:3.0.4]
+Caused by: java.lang.NumberFormatException: Cannot parse null string
+	at java.base/java.lang.Long.parseLong(Long.java:674) ~[na:na]
+	at java.base/java.lang.Long.valueOf(Long.java:1159) ~[na:na]
+	at org.example.tgbd.services.TimeService.setTime(TimeService.java:28) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-6.0.7.jar:6.0.7]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:391) ~[spring-tx-6.0.7.jar:6.0.7]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.0.7.jar:6.0.7]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:702) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.example.tgbd.services.TimeService$$SpringCGLIB$$0.setTime(<generated>) ~[classes/:na]
+	at org.example.tgbd.kafkacontroller.TimeKafkaSender.setTimeToMemorization(TimeKafkaSender.java:18) ~[classes/:na]
+	at org.example.tgbd.kafkacontroller.TimeKafkaSender.request(TimeKafkaSender.java:34) ~[classes/:na]
+	at org.example.tgbd.kafka.KafkaListeners.listener(KafkaListeners.java:32) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:169) ~[spring-messaging-6.0.7.jar:6.0.7]
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:119) ~[spring-messaging-6.0.7.jar:6.0.7]
+	at org.springframework.kafka.listener.adapter.HandlerAdapter.invoke(HandlerAdapter.java:56) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:366) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:92) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:53) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2880) ~[spring-kafka-3.0.4.jar:3.0.4]
+	... 12 common frames omitted
+
+2023-05-16T19:01:12.213+03:00  INFO 11996 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Seeking to offset 23 for partition bdTopic-0
+2023-05-16T19:01:12.213+03:00 ERROR 11996 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : Error handler threw an exception
+
+org.springframework.kafka.KafkaException: Seek to current after exception
+	at org.springframework.kafka.listener.SeekUtils.seekOrRecover(SeekUtils.java:208) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.DefaultErrorHandler.handleRemaining(DefaultErrorHandler.java:174) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeErrorHandler(KafkaMessageListenerContainer.java:2916) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.lambda$doInvokeRecordListener$56(KafkaMessageListenerContainer.java:2794) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at io.micrometer.observation.Observation.observe(Observation.java:559) ~[micrometer-observation-1.10.5.jar:1.10.5]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeRecordListener(KafkaMessageListenerContainer.java:2781) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeWithRecords(KafkaMessageListenerContainer.java:2633) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeRecordListener(KafkaMessageListenerContainer.java:2519) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeListener(KafkaMessageListenerContainer.java:2171) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeIfHaveRecords(KafkaMessageListenerContainer.java:1526) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1490) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:1365) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+Caused by: org.springframework.kafka.listener.ListenerExecutionFailedException: Listener method 'void org.example.tgbd.kafka.KafkaListeners.listener(java.lang.String)' threw exception
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.decorateException(KafkaMessageListenerContainer.java:2949) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2894) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeOnMessage(KafkaMessageListenerContainer.java:2860) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.lambda$doInvokeRecordListener$56(KafkaMessageListenerContainer.java:2783) ~[spring-kafka-3.0.4.jar:3.0.4]
+	... 10 common frames omitted
+	Suppressed: org.springframework.kafka.listener.ListenerExecutionFailedException: Restored Stack Trace
+		at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:382) ~[spring-kafka-3.0.4.jar:3.0.4]
+		at org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:92) ~[spring-kafka-3.0.4.jar:3.0.4]
+		at org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:53) ~[spring-kafka-3.0.4.jar:3.0.4]
+		at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2880) ~[spring-kafka-3.0.4.jar:3.0.4]
+Caused by: java.lang.NumberFormatException: Cannot parse null string
+	at java.base/java.lang.Long.parseLong(Long.java:674) ~[na:na]
+	at java.base/java.lang.Long.valueOf(Long.java:1159) ~[na:na]
+	at org.example.tgbd.services.TimeService.setTime(TimeService.java:28) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-6.0.7.jar:6.0.7]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:391) ~[spring-tx-6.0.7.jar:6.0.7]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.0.7.jar:6.0.7]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:702) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.example.tgbd.services.TimeService$$SpringCGLIB$$0.setTime(<generated>) ~[classes/:na]
+	at org.example.tgbd.kafkacontroller.TimeKafkaSender.setTimeToMemorization(TimeKafkaSender.java:18) ~[classes/:na]
+	at org.example.tgbd.kafkacontroller.TimeKafkaSender.request(TimeKafkaSender.java:34) ~[classes/:na]
+	at org.example.tgbd.kafka.KafkaListeners.listener(KafkaListeners.java:32) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:169) ~[spring-messaging-6.0.7.jar:6.0.7]
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:119) ~[spring-messaging-6.0.7.jar:6.0.7]
+	at org.springframework.kafka.listener.adapter.HandlerAdapter.invoke(HandlerAdapter.java:56) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:366) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:92) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:53) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2880) ~[spring-kafka-3.0.4.jar:3.0.4]
+	... 12 common frames omitted
+
+2023-05-16T19:01:12.710+03:00  INFO 11996 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Seeking to offset 23 for partition bdTopic-0
+2023-05-16T19:01:12.710+03:00 ERROR 11996 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : Error handler threw an exception
+
+org.springframework.kafka.KafkaException: Seek to current after exception
+	at org.springframework.kafka.listener.SeekUtils.seekOrRecover(SeekUtils.java:208) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.DefaultErrorHandler.handleRemaining(DefaultErrorHandler.java:174) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeErrorHandler(KafkaMessageListenerContainer.java:2916) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.lambda$doInvokeRecordListener$56(KafkaMessageListenerContainer.java:2794) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at io.micrometer.observation.Observation.observe(Observation.java:559) ~[micrometer-observation-1.10.5.jar:1.10.5]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeRecordListener(KafkaMessageListenerContainer.java:2781) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeWithRecords(KafkaMessageListenerContainer.java:2633) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeRecordListener(KafkaMessageListenerContainer.java:2519) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeListener(KafkaMessageListenerContainer.java:2171) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeIfHaveRecords(KafkaMessageListenerContainer.java:1526) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1490) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:1365) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+Caused by: org.springframework.kafka.listener.ListenerExecutionFailedException: Listener method 'void org.example.tgbd.kafka.KafkaListeners.listener(java.lang.String)' threw exception
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.decorateException(KafkaMessageListenerContainer.java:2949) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2894) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeOnMessage(KafkaMessageListenerContainer.java:2860) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.lambda$doInvokeRecordListener$56(KafkaMessageListenerContainer.java:2783) ~[spring-kafka-3.0.4.jar:3.0.4]
+	... 10 common frames omitted
+	Suppressed: org.springframework.kafka.listener.ListenerExecutionFailedException: Restored Stack Trace
+		at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:382) ~[spring-kafka-3.0.4.jar:3.0.4]
+		at org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:92) ~[spring-kafka-3.0.4.jar:3.0.4]
+		at org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:53) ~[spring-kafka-3.0.4.jar:3.0.4]
+		at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2880) ~[spring-kafka-3.0.4.jar:3.0.4]
+Caused by: java.lang.NumberFormatException: Cannot parse null string
+	at java.base/java.lang.Long.parseLong(Long.java:674) ~[na:na]
+	at java.base/java.lang.Long.valueOf(Long.java:1159) ~[na:na]
+	at org.example.tgbd.services.TimeService.setTime(TimeService.java:28) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-6.0.7.jar:6.0.7]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:391) ~[spring-tx-6.0.7.jar:6.0.7]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.0.7.jar:6.0.7]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:702) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.example.tgbd.services.TimeService$$SpringCGLIB$$0.setTime(<generated>) ~[classes/:na]
+	at org.example.tgbd.kafkacontroller.TimeKafkaSender.setTimeToMemorization(TimeKafkaSender.java:18) ~[classes/:na]
+	at org.example.tgbd.kafkacontroller.TimeKafkaSender.request(TimeKafkaSender.java:34) ~[classes/:na]
+	at org.example.tgbd.kafka.KafkaListeners.listener(KafkaListeners.java:32) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:169) ~[spring-messaging-6.0.7.jar:6.0.7]
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:119) ~[spring-messaging-6.0.7.jar:6.0.7]
+	at org.springframework.kafka.listener.adapter.HandlerAdapter.invoke(HandlerAdapter.java:56) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:366) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:92) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:53) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2880) ~[spring-kafka-3.0.4.jar:3.0.4]
+	... 12 common frames omitted
+
+2023-05-16T19:01:13.222+03:00  INFO 11996 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Seeking to offset 23 for partition bdTopic-0
+2023-05-16T19:01:13.222+03:00 ERROR 11996 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : Error handler threw an exception
+
+org.springframework.kafka.KafkaException: Seek to current after exception
+	at org.springframework.kafka.listener.SeekUtils.seekOrRecover(SeekUtils.java:208) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.DefaultErrorHandler.handleRemaining(DefaultErrorHandler.java:174) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeErrorHandler(KafkaMessageListenerContainer.java:2916) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.lambda$doInvokeRecordListener$56(KafkaMessageListenerContainer.java:2794) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at io.micrometer.observation.Observation.observe(Observation.java:559) ~[micrometer-observation-1.10.5.jar:1.10.5]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeRecordListener(KafkaMessageListenerContainer.java:2781) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeWithRecords(KafkaMessageListenerContainer.java:2633) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeRecordListener(KafkaMessageListenerContainer.java:2519) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeListener(KafkaMessageListenerContainer.java:2171) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeIfHaveRecords(KafkaMessageListenerContainer.java:1526) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1490) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:1365) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+Caused by: org.springframework.kafka.listener.ListenerExecutionFailedException: Listener method 'void org.example.tgbd.kafka.KafkaListeners.listener(java.lang.String)' threw exception
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.decorateException(KafkaMessageListenerContainer.java:2949) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2894) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeOnMessage(KafkaMessageListenerContainer.java:2860) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.lambda$doInvokeRecordListener$56(KafkaMessageListenerContainer.java:2783) ~[spring-kafka-3.0.4.jar:3.0.4]
+	... 10 common frames omitted
+	Suppressed: org.springframework.kafka.listener.ListenerExecutionFailedException: Restored Stack Trace
+		at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:382) ~[spring-kafka-3.0.4.jar:3.0.4]
+		at org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:92) ~[spring-kafka-3.0.4.jar:3.0.4]
+		at org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:53) ~[spring-kafka-3.0.4.jar:3.0.4]
+		at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2880) ~[spring-kafka-3.0.4.jar:3.0.4]
+Caused by: java.lang.NumberFormatException: Cannot parse null string
+	at java.base/java.lang.Long.parseLong(Long.java:674) ~[na:na]
+	at java.base/java.lang.Long.valueOf(Long.java:1159) ~[na:na]
+	at org.example.tgbd.services.TimeService.setTime(TimeService.java:28) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-6.0.7.jar:6.0.7]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:391) ~[spring-tx-6.0.7.jar:6.0.7]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.0.7.jar:6.0.7]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:702) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.example.tgbd.services.TimeService$$SpringCGLIB$$0.setTime(<generated>) ~[classes/:na]
+	at org.example.tgbd.kafkacontroller.TimeKafkaSender.setTimeToMemorization(TimeKafkaSender.java:18) ~[classes/:na]
+	at org.example.tgbd.kafkacontroller.TimeKafkaSender.request(TimeKafkaSender.java:34) ~[classes/:na]
+	at org.example.tgbd.kafka.KafkaListeners.listener(KafkaListeners.java:32) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:169) ~[spring-messaging-6.0.7.jar:6.0.7]
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:119) ~[spring-messaging-6.0.7.jar:6.0.7]
+	at org.springframework.kafka.listener.adapter.HandlerAdapter.invoke(HandlerAdapter.java:56) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:366) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:92) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:53) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2880) ~[spring-kafka-3.0.4.jar:3.0.4]
+	... 12 common frames omitted
+
+2023-05-16T19:01:13.724+03:00  INFO 11996 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Seeking to offset 23 for partition bdTopic-0
+2023-05-16T19:01:13.724+03:00 ERROR 11996 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : Error handler threw an exception
+
+org.springframework.kafka.KafkaException: Seek to current after exception
+	at org.springframework.kafka.listener.SeekUtils.seekOrRecover(SeekUtils.java:208) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.DefaultErrorHandler.handleRemaining(DefaultErrorHandler.java:174) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeErrorHandler(KafkaMessageListenerContainer.java:2916) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.lambda$doInvokeRecordListener$56(KafkaMessageListenerContainer.java:2794) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at io.micrometer.observation.Observation.observe(Observation.java:559) ~[micrometer-observation-1.10.5.jar:1.10.5]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeRecordListener(KafkaMessageListenerContainer.java:2781) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeWithRecords(KafkaMessageListenerContainer.java:2633) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeRecordListener(KafkaMessageListenerContainer.java:2519) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeListener(KafkaMessageListenerContainer.java:2171) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeIfHaveRecords(KafkaMessageListenerContainer.java:1526) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1490) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:1365) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+Caused by: org.springframework.kafka.listener.ListenerExecutionFailedException: Listener method 'void org.example.tgbd.kafka.KafkaListeners.listener(java.lang.String)' threw exception
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.decorateException(KafkaMessageListenerContainer.java:2949) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2894) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeOnMessage(KafkaMessageListenerContainer.java:2860) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.lambda$doInvokeRecordListener$56(KafkaMessageListenerContainer.java:2783) ~[spring-kafka-3.0.4.jar:3.0.4]
+	... 10 common frames omitted
+	Suppressed: org.springframework.kafka.listener.ListenerExecutionFailedException: Restored Stack Trace
+		at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:382) ~[spring-kafka-3.0.4.jar:3.0.4]
+		at org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:92) ~[spring-kafka-3.0.4.jar:3.0.4]
+		at org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:53) ~[spring-kafka-3.0.4.jar:3.0.4]
+		at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2880) ~[spring-kafka-3.0.4.jar:3.0.4]
+Caused by: java.lang.NumberFormatException: Cannot parse null string
+	at java.base/java.lang.Long.parseLong(Long.java:674) ~[na:na]
+	at java.base/java.lang.Long.valueOf(Long.java:1159) ~[na:na]
+	at org.example.tgbd.services.TimeService.setTime(TimeService.java:28) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-6.0.7.jar:6.0.7]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:391) ~[spring-tx-6.0.7.jar:6.0.7]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.0.7.jar:6.0.7]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:702) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.example.tgbd.services.TimeService$$SpringCGLIB$$0.setTime(<generated>) ~[classes/:na]
+	at org.example.tgbd.kafkacontroller.TimeKafkaSender.setTimeToMemorization(TimeKafkaSender.java:18) ~[classes/:na]
+	at org.example.tgbd.kafkacontroller.TimeKafkaSender.request(TimeKafkaSender.java:34) ~[classes/:na]
+	at org.example.tgbd.kafka.KafkaListeners.listener(KafkaListeners.java:32) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:169) ~[spring-messaging-6.0.7.jar:6.0.7]
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:119) ~[spring-messaging-6.0.7.jar:6.0.7]
+	at org.springframework.kafka.listener.adapter.HandlerAdapter.invoke(HandlerAdapter.java:56) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:366) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:92) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:53) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2880) ~[spring-kafka-3.0.4.jar:3.0.4]
+	... 12 common frames omitted
+
+2023-05-16T19:01:14.239+03:00  INFO 11996 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Seeking to offset 23 for partition bdTopic-0
+2023-05-16T19:01:14.239+03:00 ERROR 11996 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : Error handler threw an exception
+
+org.springframework.kafka.KafkaException: Seek to current after exception
+	at org.springframework.kafka.listener.SeekUtils.seekOrRecover(SeekUtils.java:208) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.DefaultErrorHandler.handleRemaining(DefaultErrorHandler.java:174) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeErrorHandler(KafkaMessageListenerContainer.java:2916) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.lambda$doInvokeRecordListener$56(KafkaMessageListenerContainer.java:2794) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at io.micrometer.observation.Observation.observe(Observation.java:559) ~[micrometer-observation-1.10.5.jar:1.10.5]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeRecordListener(KafkaMessageListenerContainer.java:2781) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeWithRecords(KafkaMessageListenerContainer.java:2633) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeRecordListener(KafkaMessageListenerContainer.java:2519) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeListener(KafkaMessageListenerContainer.java:2171) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeIfHaveRecords(KafkaMessageListenerContainer.java:1526) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1490) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:1365) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+Caused by: org.springframework.kafka.listener.ListenerExecutionFailedException: Listener method 'void org.example.tgbd.kafka.KafkaListeners.listener(java.lang.String)' threw exception
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.decorateException(KafkaMessageListenerContainer.java:2949) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2894) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeOnMessage(KafkaMessageListenerContainer.java:2860) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.lambda$doInvokeRecordListener$56(KafkaMessageListenerContainer.java:2783) ~[spring-kafka-3.0.4.jar:3.0.4]
+	... 10 common frames omitted
+	Suppressed: org.springframework.kafka.listener.ListenerExecutionFailedException: Restored Stack Trace
+		at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:382) ~[spring-kafka-3.0.4.jar:3.0.4]
+		at org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:92) ~[spring-kafka-3.0.4.jar:3.0.4]
+		at org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:53) ~[spring-kafka-3.0.4.jar:3.0.4]
+		at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2880) ~[spring-kafka-3.0.4.jar:3.0.4]
+Caused by: java.lang.NumberFormatException: Cannot parse null string
+	at java.base/java.lang.Long.parseLong(Long.java:674) ~[na:na]
+	at java.base/java.lang.Long.valueOf(Long.java:1159) ~[na:na]
+	at org.example.tgbd.services.TimeService.setTime(TimeService.java:28) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-6.0.7.jar:6.0.7]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:391) ~[spring-tx-6.0.7.jar:6.0.7]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.0.7.jar:6.0.7]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:702) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.example.tgbd.services.TimeService$$SpringCGLIB$$0.setTime(<generated>) ~[classes/:na]
+	at org.example.tgbd.kafkacontroller.TimeKafkaSender.setTimeToMemorization(TimeKafkaSender.java:18) ~[classes/:na]
+	at org.example.tgbd.kafkacontroller.TimeKafkaSender.request(TimeKafkaSender.java:34) ~[classes/:na]
+	at org.example.tgbd.kafka.KafkaListeners.listener(KafkaListeners.java:32) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:169) ~[spring-messaging-6.0.7.jar:6.0.7]
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:119) ~[spring-messaging-6.0.7.jar:6.0.7]
+	at org.springframework.kafka.listener.adapter.HandlerAdapter.invoke(HandlerAdapter.java:56) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:366) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:92) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:53) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2880) ~[spring-kafka-3.0.4.jar:3.0.4]
+	... 12 common frames omitted
+
+2023-05-16T19:01:14.738+03:00  INFO 11996 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.clients.consumer.KafkaConsumer     : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Seeking to offset 23 for partition bdTopic-0
+2023-05-16T19:01:14.738+03:00 ERROR 11996 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : Error handler threw an exception
+
+org.springframework.kafka.KafkaException: Seek to current after exception
+	at org.springframework.kafka.listener.SeekUtils.seekOrRecover(SeekUtils.java:208) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.DefaultErrorHandler.handleRemaining(DefaultErrorHandler.java:174) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeErrorHandler(KafkaMessageListenerContainer.java:2916) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.lambda$doInvokeRecordListener$56(KafkaMessageListenerContainer.java:2794) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at io.micrometer.observation.Observation.observe(Observation.java:559) ~[micrometer-observation-1.10.5.jar:1.10.5]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeRecordListener(KafkaMessageListenerContainer.java:2781) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeWithRecords(KafkaMessageListenerContainer.java:2633) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeRecordListener(KafkaMessageListenerContainer.java:2519) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeListener(KafkaMessageListenerContainer.java:2171) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeIfHaveRecords(KafkaMessageListenerContainer.java:1526) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1490) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:1365) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+Caused by: org.springframework.kafka.listener.ListenerExecutionFailedException: Listener method 'void org.example.tgbd.kafka.KafkaListeners.listener(java.lang.String)' threw exception
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.decorateException(KafkaMessageListenerContainer.java:2949) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2894) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeOnMessage(KafkaMessageListenerContainer.java:2860) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.lambda$doInvokeRecordListener$56(KafkaMessageListenerContainer.java:2783) ~[spring-kafka-3.0.4.jar:3.0.4]
+	... 10 common frames omitted
+	Suppressed: org.springframework.kafka.listener.ListenerExecutionFailedException: Restored Stack Trace
+		at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:382) ~[spring-kafka-3.0.4.jar:3.0.4]
+		at org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:92) ~[spring-kafka-3.0.4.jar:3.0.4]
+		at org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:53) ~[spring-kafka-3.0.4.jar:3.0.4]
+		at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2880) ~[spring-kafka-3.0.4.jar:3.0.4]
+Caused by: java.lang.NumberFormatException: Cannot parse null string
+	at java.base/java.lang.Long.parseLong(Long.java:674) ~[na:na]
+	at java.base/java.lang.Long.valueOf(Long.java:1159) ~[na:na]
+	at org.example.tgbd.services.TimeService.setTime(TimeService.java:28) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-6.0.7.jar:6.0.7]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:391) ~[spring-tx-6.0.7.jar:6.0.7]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.0.7.jar:6.0.7]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:702) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.example.tgbd.services.TimeService$$SpringCGLIB$$0.setTime(<generated>) ~[classes/:na]
+	at org.example.tgbd.kafkacontroller.TimeKafkaSender.setTimeToMemorization(TimeKafkaSender.java:18) ~[classes/:na]
+	at org.example.tgbd.kafkacontroller.TimeKafkaSender.request(TimeKafkaSender.java:34) ~[classes/:na]
+	at org.example.tgbd.kafka.KafkaListeners.listener(KafkaListeners.java:32) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:169) ~[spring-messaging-6.0.7.jar:6.0.7]
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:119) ~[spring-messaging-6.0.7.jar:6.0.7]
+	at org.springframework.kafka.listener.adapter.HandlerAdapter.invoke(HandlerAdapter.java:56) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:366) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:92) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:53) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2880) ~[spring-kafka-3.0.4.jar:3.0.4]
+	... 12 common frames omitted
+
+2023-05-16T19:01:15.233+03:00 ERROR 11996 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.kafka.listener.DefaultErrorHandler   : Backoff FixedBackOff{interval=0, currentAttempts=10, maxAttempts=9} exhausted for bdTopic-0@23
+
+org.springframework.kafka.listener.ListenerExecutionFailedException: Listener method 'void org.example.tgbd.kafka.KafkaListeners.listener(java.lang.String)' threw exception
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.decorateException(KafkaMessageListenerContainer.java:2949) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2894) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeOnMessage(KafkaMessageListenerContainer.java:2860) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.lambda$doInvokeRecordListener$56(KafkaMessageListenerContainer.java:2783) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at io.micrometer.observation.Observation.observe(Observation.java:559) ~[micrometer-observation-1.10.5.jar:1.10.5]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeRecordListener(KafkaMessageListenerContainer.java:2781) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeWithRecords(KafkaMessageListenerContainer.java:2633) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeRecordListener(KafkaMessageListenerContainer.java:2519) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeListener(KafkaMessageListenerContainer.java:2171) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.invokeIfHaveRecords(KafkaMessageListenerContainer.java:1526) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.pollAndInvoke(KafkaMessageListenerContainer.java:1490) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.run(KafkaMessageListenerContainer.java:1365) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1804) ~[na:na]
+	at java.base/java.lang.Thread.run(Thread.java:833) ~[na:na]
+	Suppressed: org.springframework.kafka.listener.ListenerExecutionFailedException: Restored Stack Trace
+		at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:382) ~[spring-kafka-3.0.4.jar:3.0.4]
+		at org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:92) ~[spring-kafka-3.0.4.jar:3.0.4]
+		at org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:53) ~[spring-kafka-3.0.4.jar:3.0.4]
+		at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2880) ~[spring-kafka-3.0.4.jar:3.0.4]
+Caused by: java.lang.NumberFormatException: Cannot parse null string
+	at java.base/java.lang.Long.parseLong(Long.java:674) ~[na:na]
+	at java.base/java.lang.Long.valueOf(Long.java:1159) ~[na:na]
+	at org.example.tgbd.services.TimeService.setTime(TimeService.java:28) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
+	at org.springframework.aop.support.AopUtils.invokeJoinpointUsingReflection(AopUtils.java:343) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.invokeJoinpoint(ReflectiveMethodInvocation.java:196) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:163) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.springframework.transaction.interceptor.TransactionInterceptor$1.proceedWithInvocation(TransactionInterceptor.java:123) ~[spring-tx-6.0.7.jar:6.0.7]
+	at org.springframework.transaction.interceptor.TransactionAspectSupport.invokeWithinTransaction(TransactionAspectSupport.java:391) ~[spring-tx-6.0.7.jar:6.0.7]
+	at org.springframework.transaction.interceptor.TransactionInterceptor.invoke(TransactionInterceptor.java:119) ~[spring-tx-6.0.7.jar:6.0.7]
+	at org.springframework.aop.framework.ReflectiveMethodInvocation.proceed(ReflectiveMethodInvocation.java:184) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.springframework.aop.framework.CglibAopProxy$CglibMethodInvocation.proceed(CglibAopProxy.java:750) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.springframework.aop.framework.CglibAopProxy$DynamicAdvisedInterceptor.intercept(CglibAopProxy.java:702) ~[spring-aop-6.0.7.jar:6.0.7]
+	at org.example.tgbd.services.TimeService$$SpringCGLIB$$0.setTime(<generated>) ~[classes/:na]
+	at org.example.tgbd.kafkacontroller.TimeKafkaSender.setTimeToMemorization(TimeKafkaSender.java:18) ~[classes/:na]
+	at org.example.tgbd.kafkacontroller.TimeKafkaSender.request(TimeKafkaSender.java:34) ~[classes/:na]
+	at org.example.tgbd.kafka.KafkaListeners.listener(KafkaListeners.java:32) ~[classes/:na]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:104) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:577) ~[na:na]
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.doInvoke(InvocableHandlerMethod.java:169) ~[spring-messaging-6.0.7.jar:6.0.7]
+	at org.springframework.messaging.handler.invocation.InvocableHandlerMethod.invoke(InvocableHandlerMethod.java:119) ~[spring-messaging-6.0.7.jar:6.0.7]
+	at org.springframework.kafka.listener.adapter.HandlerAdapter.invoke(HandlerAdapter.java:56) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.adapter.MessagingMessageListenerAdapter.invokeHandler(MessagingMessageListenerAdapter.java:366) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:92) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.adapter.RecordMessagingMessageListenerAdapter.onMessage(RecordMessagingMessageListenerAdapter.java:53) ~[spring-kafka-3.0.4.jar:3.0.4]
+	at org.springframework.kafka.listener.KafkaMessageListenerContainer$ListenerConsumer.doInvokeOnMessage(KafkaMessageListenerContainer.java:2880) ~[spring-kafka-3.0.4.jar:3.0.4]
+	... 12 common frames omitted
+
+2023-05-16T19:07:42.057+03:00  INFO 11996 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Request joining group due to: group is already rebalancing
+2023-05-16T19:07:42.057+03:00  INFO 11996 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Revoke previously assigned partitions bdTopic-0
+2023-05-16T19:07:42.057+03:00  INFO 11996 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : myGroup: partitions revoked: [bdTopic-0]
+2023-05-16T19:07:42.057+03:00  INFO 11996 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] (Re-)joining group
+2023-05-16T19:07:42.061+03:00  INFO 11996 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Successfully joined group with generation Generation{generationId=41, memberId='consumer-myGroup-1-745005dd-e0c9-4a9c-b13b-b416f7c377d8', protocol='range'}
+2023-05-16T19:07:42.061+03:00  INFO 11996 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Finished assignment for group at generation 41: {consumer-myGroup-1-745005dd-e0c9-4a9c-b13b-b416f7c377d8=Assignment(partitions=[bdTopic-0])}
+2023-05-16T19:07:42.064+03:00  INFO 11996 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Successfully synced group in generation Generation{generationId=41, memberId='consumer-myGroup-1-745005dd-e0c9-4a9c-b13b-b416f7c377d8', protocol='range'}
+2023-05-16T19:07:42.065+03:00  INFO 11996 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Notifying assignor about the new Assignment(partitions=[bdTopic-0])
+2023-05-16T19:07:42.065+03:00  INFO 11996 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Adding newly assigned partitions: bdTopic-0
+2023-05-16T19:07:42.070+03:00  INFO 11996 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Setting offset for partition bdTopic-0 to the committed offset FetchPosition{offset=24, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=0}}
+2023-05-16T19:07:42.070+03:00  INFO 11996 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : myGroup: partitions assigned: [bdTopic-0]
+2023-05-16T19:07:48.079+03:00  INFO 11996 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Request joining group due to: group is already rebalancing
+2023-05-16T19:07:48.080+03:00  INFO 11996 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Revoke previously assigned partitions bdTopic-0
+2023-05-16T19:07:48.080+03:00  INFO 11996 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : myGroup: partitions revoked: [bdTopic-0]
+2023-05-16T19:07:48.080+03:00  INFO 11996 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] (Re-)joining group
+2023-05-16T19:07:48.083+03:00  INFO 11996 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Successfully joined group with generation Generation{generationId=42, memberId='consumer-myGroup-1-745005dd-e0c9-4a9c-b13b-b416f7c377d8', protocol='range'}
+2023-05-16T19:07:48.248+03:00  INFO 11996 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Finished assignment for group at generation 42: {consumer-myGroup-1-dd27ef5d-92af-4015-b4aa-842610276fc1=Assignment(partitions=[serviceTopic-0]), consumer-myGroup-1-745005dd-e0c9-4a9c-b13b-b416f7c377d8=Assignment(partitions=[bdTopic-0])}
+2023-05-16T19:07:48.252+03:00  INFO 11996 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Successfully synced group in generation Generation{generationId=42, memberId='consumer-myGroup-1-745005dd-e0c9-4a9c-b13b-b416f7c377d8', protocol='range'}
+2023-05-16T19:07:48.253+03:00  INFO 11996 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Notifying assignor about the new Assignment(partitions=[bdTopic-0])
+2023-05-16T19:07:48.253+03:00  INFO 11996 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Adding newly assigned partitions: bdTopic-0
+2023-05-16T19:07:48.257+03:00  INFO 11996 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.a.k.c.c.internals.ConsumerCoordinator  : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Setting offset for partition bdTopic-0 to the committed offset FetchPosition{offset=24, offsetEpoch=Optional.empty, currentLeader=LeaderAndEpoch{leader=Optional[localhost:9092 (id: 1 rack: null)], epoch=0}}
+2023-05-16T19:07:48.258+03:00  INFO 11996 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] o.s.k.l.KafkaMessageListenerContainer    : myGroup: partitions assigned: [bdTopic-0]
+2023-05-16T19:09:20.362+03:00  INFO 11996 --- [org.springframework.kafka.KafkaListenerEndpointContainer#0-0-C-1] org.apache.kafka.clients.NetworkClient   : [Consumer clientId=consumer-myGroup-1, groupId=myGroup] Node -1 disconnected.
+2023-05-16T19:09:49.213+03:00  INFO 11996 --- [kafka-producer-network-thread | producer-1] org.apache.kafka.clients.NetworkClient   : [Producer clientId=producer-1] Node -1 disconnected.

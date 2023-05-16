@@ -1,5 +1,6 @@
 package org.example.tgservice.keyboardMarkups;
 
+import org.example.tgbd.dto.UserDto;
 import org.springframework.stereotype.Service;
 import org.telegram.telegrambots.meta.api.methods.updatingmessages.EditMessageText;
 import org.telegram.telegrambots.meta.api.objects.Message;
@@ -16,10 +17,6 @@ public class BaseButton implements Button {
     public InlineKeyboardMarkup inlineKeyboardMarkup() {
 
         InlineKeyboardMarkup keyboardMarkup = new InlineKeyboardMarkup();
-
-//        var theEbbinghausСurve = new InlineKeyboardButton();
-//        theEbbinghausСurve.setText("Кривая Эббингауза");
-//        theEbbinghausСurve.setCallbackData("The_Ebbinghaus_Сurve");
 
         var createdTime = new InlineKeyboardButton();
         createdTime.setText("Добавить время");

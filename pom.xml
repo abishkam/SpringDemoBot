@@ -19,7 +19,7 @@
     <modules>
         <module>TgBd</module>
         <module>TgService</module>
-        <module>tgBdApi</module>
+        <module>TgBdApi</module>
     </modules>
 
     <properties>

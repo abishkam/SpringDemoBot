@@ -17,13 +17,13 @@ public interface BotMapper {
     @Mapping(target = "messageId", source = "messageId")
     @Mapping(target = "message", source = "message")
     @Mapping(target = "timeList", source = "timeList")
-    MemorizationDto MemorizationModelToDto(Memorization memorization);
+    MemorizationDto memorizationModelToDto(Memorization memorization);
 
     @Mapping(target = "messageId", source = "messageId")
     @Mapping(target = "message", source = "message")
     @Mapping(target = "timeList", source = "timeList")
     @Mapping(target = "user", ignore = true)
-    Memorization MemorizationDtoToModel(MemorizationDto memorizationDto);
+    Memorization memorizationDtoToModel(MemorizationDto memorizationDto);
 
     @Mapping(target = "chatId", source = "chatId")
     @Mapping(target = "userName", source = "userName")
@@ -31,26 +31,26 @@ public interface BotMapper {
     @Mapping(target = "state", source = "userState")
     @Mapping(target = "timeState", ignore = true)
     @Mapping(target = "amount", ignore = true)
-    UserDto UserModelToDto(User user);
+    UserDto userModelToDto(User user);
 
     @Mapping(target = "chatId", source = "chatId")
     @Mapping(target = "userName", source = "userName")
     @Mapping(target = "memorizations", source = "memorizationDtos")
     @Mapping(target = "userState", source = "state")
-    User UserDtoToModel(UserDto userDto);
+    User userDtoToModel(UserDto userDto);
 
     List<MemorizationDto> repeatMap(List<Memorization> memorizations);
 
     @Mapping(target = "id", source = "id")
     @Mapping(target = "unitOfTime", source = "unitOfTime")
     @Mapping(target = "amount", source = "amount")
-    TimeDto TimeModelToDto(Time time);
+    TimeDto timeModelToDto(Time time);
 
     @Mapping(target = "id", source = "id")
     @Mapping(target = "unitOfTime", source = "unitOfTime")
     @Mapping(target = "amount", source = "amount")
     @Mapping(target = "memorization", ignore = true)
-    Time TimeDtoToModel(TimeDto timeDto);
+    Time timeDtoToModel(TimeDto timeDto);
 
     List<TimeDto> timeDtoMap(List<Time> repeat);
 
