@@ -275,7 +275,7 @@
                         <message key="ws.preceded" value="Перед ''{0}'' не должно быть символа пробела." />
                         <message key="ws.illegalFollow" value="После ''{0}'' должен следовать символ пробела." />
                         <message key="ws.notPreceded" value="Перед ''{0}'' должен быть символ пробела." />
-                </module>         
+                </module>
                 <module name="Regexp">
       <property name="format" value="default[\s]+:|case[\s]{2,}[a-zA-Z0-9]*[\s]*:|case[\s][a-zA-Z0-9]*[\s]{1,}:"/>
       <property name="illegalPattern" value="true"/>
