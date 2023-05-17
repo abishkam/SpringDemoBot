@@ -14,23 +14,22 @@ import org.springframework.kafka.support.serializer.JsonSerializer;
 import java.util.HashMap;
 import java.util.Map;
 
-@EnableKafka
 @Configuration
 public class KafkaProducerConfig {
 
     @Bean
     public ProducerFactory<String, DtoKeeper> producerFactory() {
-        Map<String, Object> configProps = new HashMap<>();
-        configProps.put(
+        Map<String, Object> props = new HashMap<>();
+        props.put(
                 ProducerConfig.BOOTSTRAP_SERVERS_CONFIG,
                 "localhost:9092");
-        configProps.put(
+        props.put(
                 ProducerConfig.KEY_SERIALIZER_CLASS_CONFIG,
                 StringSerializer.class);
-        configProps.put(
+        props.put(
                 ProducerConfig.VALUE_SERIALIZER_CLASS_CONFIG,
                 JsonSerializer.class);
-        return new DefaultKafkaProducerFactory<>(configProps);
+        return new DefaultKafkaProducerFactory<>(props);
     }
 
     @Bean

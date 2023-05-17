@@ -19,7 +19,7 @@ public class UserService {
     public String createNewUser(UserDto userDto) {
 
         if (userRepository.findById(userDto.getChatId()).isEmpty()) {
-            userRepository.save(botMapper.UserDtoToModel(userDto));
+            userRepository.save(botMapper.userDtoToModel(userDto));
             return "Hi, " + userDto.getUserName() + ", nice to meet you!";
         }
 
@@ -28,7 +28,7 @@ public class UserService {
 
     public UserDto getById(DtoKeeper dtoKeeper) {
 
-        return botMapper.UserModelToDto(userRepository.findById(dtoKeeper.getUserDto().getChatId()).get());
+        return botMapper.userModelToDto(userRepository.findById(dtoKeeper.getUserDto().getChatId()).get());
     }
 
 }

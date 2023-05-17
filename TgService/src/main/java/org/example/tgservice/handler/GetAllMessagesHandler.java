@@ -19,16 +19,15 @@ public class GetAllMessagesHandler implements MessageHandler {
     @Override
     public void kafkaSender(Message mes) {
 
-        String chatId = String.valueOf(mes.getChatId());
-        String name = mes.getChat().getUserName();
+        Long chatId = mes.getChatId();
 
-        kafkaSender.memorizationResponse("getAllInformation", chatId, name);
+        kafkaSender.memorizationResponse("getAllInformation", chatId);
 
     }
 
 
     public boolean support(String message) {
-        return message.equals("/getAllInformation");
+        return message.equals("/getallmessages");
     }
 
 }

@@ -80,12 +80,4 @@ public class MemorizationService {
         return message;
     }
 
-    public String getMessage(MemorizationDto memorizationDto) {
-        Optional<Memorization> memorization = memorizationRepository.findById(memorizationDto.getMessageId());
-
-        if (memorization.isPresent()) {
-            return memorization.get().getMessage();
-        }
-        return "ssss";
-    }
 }
