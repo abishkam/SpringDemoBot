@@ -17,8 +17,9 @@ public class GetAllInformation implements KafkaSender {
 
     @Override
     public void send(DtoKeeper dtoKeeper) {
-        dtoKeeper.setMessage(memorizationService.getAllMessages(dtoKeeper.getUserDto()));
 
+        dtoKeeper = memorizationService.getAllMessages(dtoKeeper);
         kafkaTemplate.send(topicProperties.getTopic(), dtoKeeper);
+
     }
 }

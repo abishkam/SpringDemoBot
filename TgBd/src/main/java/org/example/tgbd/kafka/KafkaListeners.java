@@ -17,7 +17,6 @@ public class KafkaListeners {
 
     @KafkaListener(topics = "bdTopic", groupId = "myGroup")
     void listener(DtoKeeper dtoKeeper) {
-
         Optional<KafkaSender> controllerOptional =
             kafkaControllerList.entrySet().stream()
                     .filter(i -> i.getKey().equals(dtoKeeper.getMethodName()))

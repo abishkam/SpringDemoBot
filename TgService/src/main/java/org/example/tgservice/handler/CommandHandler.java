@@ -12,12 +12,11 @@ import java.util.List;
 public class CommandHandler {
 
     private final List<MessageHandler> messageHandlerList;
+    private final NumbersMessageHandler numbersMessageHandler;
 
     public void handler(Message message) {
 
         if (message.getText().startsWith("/")) {
-
-
             String command = message.getText().split(" ")[0];
             MessageHandler messageHandler = messageHandlerList.stream()
                     .filter(i -> i.support(command))
@@ -26,6 +25,8 @@ public class CommandHandler {
 
             messageHandler.repeater(message);
 
+        }else{
+            numbersMessageHandler.repeater(message);
         }
 
     }

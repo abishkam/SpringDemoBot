@@ -2,7 +2,6 @@ package org.example.tgbd.model;
 
 
 import jakarta.persistence.CascadeType;
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.FetchType;
 import jakarta.persistence.Id;
@@ -32,8 +31,7 @@ public class User {
             fetch = FetchType.EAGER)
     @JoinColumn(name = "chatId")
     private List<Memorization> memorizations;
-    @Column(columnDefinition = "varchar(255) default 'free'")
-    private String userState;
+
 
     @Override
     public String toString() {

@@ -25,7 +25,6 @@ public class GetAllMessagesHandler implements MessageHandler {
 
     }
 
-
     public boolean support(String message) {
         return message.equals("/getallmessages");
     }
