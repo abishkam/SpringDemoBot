@@ -1,28 +1,30 @@
 package org.example.tgservice.handler;
 
 import lombok.RequiredArgsConstructor;
-import org.example.tgservice.patterns.HandlerTemplate;
-import org.springframework.http.ResponseEntity;
+import org.example.tgservice.handler.interfaces.MessageHandler;
+import org.example.tgservice.kafka.KafkaSender;
 import org.springframework.stereotype.Service;
-import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 import org.telegram.telegrambots.meta.api.objects.Message;
-
-import java.util.Objects;
 
 @Service("/start")
 @RequiredArgsConstructor
 public class StartMessageHandler implements MessageHandler {
 
-    private final HandlerTemplate handlerTemplate;
+    private final KafkaSender kafkaSender;
 
-    public SendMessage send(Message msg) {
+    public void repeater(Message message) {
+        kafkaSender(message);
+    }
+
+    public void kafkaSender(Message msg) {
         var chatId = msg.getChatId();
-        var chat = msg.getChat();
 
-        ResponseEntity<String> response =  handlerTemplate.userResponse("createUser", chatId.toString(), chat.getUserName());
+        kafkaSender.userResponse("createUser", chatId);
 
-        return new SendMessage(String.valueOf(chatId), Objects.requireNonNull(response.getBody()));
+    }
 
+    public boolean support(String message) {
+        return message.equals("/start");
     }
 
 }
