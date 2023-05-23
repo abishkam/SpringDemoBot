@@ -7,7 +7,7 @@ import org.example.tgbd.services.MemorizationService;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Component;
 
-@Component("getAllInformation")
+@Component
 @RequiredArgsConstructor
 public class GetAllInformation implements KafkaSender {
 

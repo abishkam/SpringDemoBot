@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 
 @Component("getListOfTimeOfMessage")
 @RequiredArgsConstructor
-public class GetListOfTimeOfMessage implements KafkaSender{
+public class GetListOfTimeOfMessage implements KafkaSender {
 
 
     private final TimeService timeService;
