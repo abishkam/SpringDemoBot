@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 
 @Component("deleteAndGetAllInformation")
 @RequiredArgsConstructor
-public class DeleteAndGetAllInformation implements KafkaSender{
+public class DeleteAndGetAllInformation implements KafkaSender {
 
     private final MemorizationService memorizationService;
     private final KafkaTemplate<String, DtoKeeper> kafkaTemplate;

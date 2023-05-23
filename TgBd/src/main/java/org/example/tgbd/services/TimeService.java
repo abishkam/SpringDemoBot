@@ -27,9 +27,9 @@ public class TimeService {
 
     public void setUnitOfTime(final DtoKeeper dtoKeeper) {
 
-        if(memorizationRepository
+        if (memorizationRepository
                 .existsByUserChatId(dtoKeeper.getUserDto().getChatId(),
-                        dtoKeeper.getMemorizationDto().getMessageId())){
+                        dtoKeeper.getMemorizationDto().getMessageId())) {
 
             Memorization memorization
                     = memorizationRepository.findById(dtoKeeper.getMemorizationDto().getMessageId()).get();
@@ -63,12 +63,12 @@ public class TimeService {
         return dtoKeeper;
     }
 
-    public void deleteTime(DtoKeeper dtoKeeper){
+    public void deleteTime(DtoKeeper dtoKeeper) {
         timeRepository.deleteById(dtoKeeper.getTimeDto().getId());
 
     }
 
-    public void deleteAllTimeOfMessage(DtoKeeper dtoKeeper){
+    public void deleteAllTimeOfMessage(DtoKeeper dtoKeeper) {
 
         timeRepository.deleteAllByMessageId(dtoKeeper.getUserDto().getMemorizationDtos().get(0).getMessageId());
     }
