@@ -7,7 +7,7 @@ import org.example.tgbd.services.TimeService;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Component;
 
-@Component("getListOfTimeOfMessage")
+@Component
 @RequiredArgsConstructor
 public class GetListOfTimeOfMessage implements KafkaSender{
 
@@ -20,6 +20,6 @@ public class GetListOfTimeOfMessage implements KafkaSender{
     public void send(DtoKeeper dtoKeeper) {
         dtoKeeper = timeService.getListOfTimeOfMessage(dtoKeeper);
 
-        kafkaTemplate.send(topicProperties.getTopic(), dtoKeeper);
+        kafkaTemplate.send(topicProperties.getServiceTopic(), dtoKeeper);
     }
 }

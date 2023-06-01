@@ -24,12 +24,13 @@ public class AllInformation implements Button {
 
         InlineKeyboardMarkup markupLine =  new InlineKeyboardMarkup();
         List<List<InlineKeyboardButton>> rowsInLine = new ArrayList<>();
-
-        for (int i = 0; i < memList.size(); i++) {
-            var message = new InlineKeyboardButton();
-            message.setText(memList.get(i).getMessage());
-            message.setCallbackData("on " + memList.get(i).getMessageId());
-            rowsInLine.add(Collections.singletonList(message));
+        if(memList != null && memList.size() > 0){
+            for (int i = 0; i < memList.size(); i++) {
+                var message = new InlineKeyboardButton();
+                message.setText(memList.get(i).getMessage());
+                message.setCallbackData("on " + memList.get(i).getMessageId());
+                rowsInLine.add(Collections.singletonList(message));
+            }
         }
 
         markupLine.setKeyboard(rowsInLine);

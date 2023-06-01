@@ -7,7 +7,7 @@ import org.example.tgbd.services.TimeService;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Component;
 
-@Component("deleteTime")
+@Component
 @RequiredArgsConstructor
 public class DeleteTime implements KafkaSender {
 
@@ -21,6 +21,6 @@ public class DeleteTime implements KafkaSender {
         timeService.deleteTime(dtoKeeper);
         dtoKeeper = timeService.getListOfTimeOfMessage(dtoKeeper);
         dtoKeeper.setMethodName("getListOfTimeOfMessage");
-        kafkaTemplate.send(topicProperties.getTopic(), dtoKeeper);
+        kafkaTemplate.send(topicProperties.getServiceTopic(), dtoKeeper);
     }
 }

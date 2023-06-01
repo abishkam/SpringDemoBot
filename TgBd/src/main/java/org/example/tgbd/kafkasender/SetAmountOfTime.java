@@ -33,7 +33,7 @@ public class SetAmountOfTime implements KafkaSender {
         TimerTask timerTask = new TimerTask() {
             @Override
             public void run() {
-                kafkaTemplate.send(topicProperties.getTopic(), dtoKeeper);
+                kafkaTemplate.send(topicProperties.getServiceTopic(), dtoKeeper);
                 timeService.deleteTime(dtoKeeper);
             }
         };

@@ -1,5 +1,6 @@
 package org.example.tgservice.kafka;
 
+import jakarta.validation.constraints.NotBlank;
 import lombok.Getter;
 import lombok.NonNull;
 import lombok.Setter;
@@ -12,9 +13,9 @@ import org.springframework.stereotype.Component;
 @Setter
 public class TopicProperties {
 
-    @NonNull
+    @NotBlank
     private String bdTopic;
-    @NonNull
+    @NotBlank
     private String serviceTopic;
 
 }

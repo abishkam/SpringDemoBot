@@ -18,6 +18,6 @@ public class CreateUser implements KafkaSender {
     @Override
     public void send(DtoKeeper dtoKeeper) {
         dtoKeeper.setMessage(userService.createNewUser(dtoKeeper.getUserDto()));
-        kafkaTemplate.send(topicProperties.getTopic(), dtoKeeper);
+        kafkaTemplate.send(topicProperties.getServiceTopic(), dtoKeeper);
     }
 }

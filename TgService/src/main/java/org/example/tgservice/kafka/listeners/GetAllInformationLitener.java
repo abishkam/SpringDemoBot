@@ -1,6 +1,7 @@
 package org.example.tgservice.kafka.listeners;
 
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.example.tgbd.dto.DtoKeeper;
 import org.example.tgservice.TelegramBot;
 import org.example.tgservice.keyboardMarkups.allMessagesButtons.AllInformation;
@@ -13,18 +14,19 @@ import org.telegram.telegrambots.meta.api.methods.updatingmessages.EditMessageTe
 @Service
 @RequiredArgsConstructor
 @Order(Ordered.HIGHEST_PRECEDENCE)
+@Slf4j
 public class GetAllInformationLitener implements Listeners{
 
     private final TelegramBot telegramBot;
     private final AllInformation allInformation;
 
     public void send(DtoKeeper dtoKeeper){
-
+        log.info(dtoKeeper.getMessage());
         if(dtoKeeper.getMemorizationDto() != null){
 
             EditMessageText editMessage = new EditMessageText();
             editMessage.setChatId(dtoKeeper.getUserDto().getChatId().toString());
-            editMessage.setText("All your saved information");
+            editMessage.setText(dtoKeeper.getMessage());
             editMessage.setReplyMarkup(
                     allInformation.inlineKeyboardMarkup(dtoKeeper)
             );
@@ -32,8 +34,7 @@ public class GetAllInformationLitener implements Listeners{
 
             telegramBot.executeEditMessageText(editMessage);
         } else{
-
-            SendMessage answer = new SendMessage(String.valueOf(dtoKeeper.getUserDto().getChatId()),"All your saved information");
+            SendMessage answer = new SendMessage(String.valueOf(dtoKeeper.getUserDto().getChatId()),dtoKeeper.getMessage());
             answer.setReplyMarkup(allInformation.inlineKeyboardMarkup(dtoKeeper));
             telegramBot.executeSendMessage(answer);
         }

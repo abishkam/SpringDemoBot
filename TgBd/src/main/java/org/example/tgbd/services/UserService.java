@@ -20,10 +20,10 @@ public class UserService {
 
         if (userRepository.findById(userDto.getChatId()).isEmpty()) {
             userRepository.save(botMapper.userDtoToModel(userDto));
-            return "Hi, nice to meet you!";
+            return "Привет, приятно познакомиться!";
         }
 
-        return "You were already registered";
+        return "Вы уже зарегестрированы";
     }
 
     public UserDto getById(DtoKeeper dtoKeeper) {

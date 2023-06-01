@@ -3,6 +3,7 @@ package org.example.tgbd.services;
 
 import lombok.RequiredArgsConstructor;
 
+import lombok.extern.slf4j.Slf4j;
 import org.example.tgbd.dto.DtoKeeper;
 import org.example.tgbd.dto.MemorizationDto;
 import org.example.tgbd.mapper.BotMapper;
@@ -21,6 +22,7 @@ import java.util.Optional;
 @Service
 @Transactional
 @RequiredArgsConstructor
+@Slf4j
 public class MemorizationService {
 
     private final UserRepository userRepository;
@@ -50,7 +52,7 @@ public class MemorizationService {
                     userRepository.save(newUser);
             });
 
-        return "Id of a message - " + dtoKeeper.getMemorizationDto().getMessageId();
+        return "Вы сохранили сообщение";
 
     }
 
@@ -60,14 +62,14 @@ public class MemorizationService {
 
         if(user.isPresent()) {
             if (user.get().getMemorizations().isEmpty()) {
-                dtoKeeper.setMessage("You don't have any saved messages");
+                dtoKeeper.setMessage("У вас нет сохраненной информации");
             } else {
                 List<MemorizationDto> memorizationDtos = botMapper.repeatMap(user.get().getMemorizations());
-                dtoKeeper.setMessage("All your saved information");
+                dtoKeeper.setMessage("Вся ваша сохранненая информация");
                 dtoKeeper.getUserDto().setMemorizationDtos(memorizationDtos);
             }
         } else {
-            dtoKeeper.setMessage("You don't have any saved messages");
+            dtoKeeper.setMessage("У вас нет сохраненной информации");
         }
 
         return dtoKeeper;
@@ -75,13 +77,22 @@ public class MemorizationService {
 
     public DtoKeeper deletAndGetAllMessages(DtoKeeper dtoKeeper) {
 
-        Optional<User> user = userRepository.findById(dtoKeeper.getUserDto().getChatId());
         timeService.deleteAllTimeOfMessage(dtoKeeper);
         memorizationRepository.deleteById(dtoKeeper.getUserDto().getMemorizationDtos().get(0).getMessageId());
 
-        List<MemorizationDto> memorizationDtos = botMapper.repeatMap(user.get().getMemorizations());
-        dtoKeeper.setMessage("All your saved information");
-        dtoKeeper.getUserDto().setMemorizationDtos(memorizationDtos);
+        List<MemorizationDto> memorizationDtos = botMapper.repeatMap(memorizationRepository.findAllByUserChatId(dtoKeeper.getUserDto().getChatId()));
+
+        memorizationDtos.stream()
+                .findAny()
+                .ifPresentOrElse(
+                        i -> {
+                            dtoKeeper.setMessage("Вся ваша сохранненая информация");
+                            dtoKeeper.getUserDto().setMemorizationDtos(memorizationDtos);
+                        },
+                        () -> dtoKeeper.setMessage("У вас нет сохраненной информации")
+                );
+
+
 
         return dtoKeeper;
     }
