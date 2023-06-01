@@ -20,7 +20,7 @@ public class UserService {
 
         if (userRepository.findById(userDto.getChatId()).isEmpty()) {
             userRepository.save(botMapper.userDtoToModel(userDto));
-            return "Hi, " + userDto.getUserName() + ", nice to meet you!";
+            return "Hi, nice to meet you!";
         }
 
         return "You were already registered";

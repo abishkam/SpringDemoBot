@@ -27,12 +27,10 @@ public interface BotMapper {
 
     @Mapping(target = "chatId", source = "chatId")
     @Mapping(target = "userName", source = "userName")
-    @Mapping(target = "memorizationDtos", source = "memorizations")
     UserDto userModelToDto(User user);
 
     @Mapping(target = "chatId", source = "chatId")
     @Mapping(target = "userName", source = "userName")
-    @Mapping(target = "memorizations", source = "memorizationDtos")
     User userDtoToModel(UserDto userDto);
 
     List<MemorizationDto> repeatMap(List<Memorization> memorizations);
@@ -40,16 +38,18 @@ public interface BotMapper {
     @Mapping(target = "id", source = "id")
     @Mapping(target = "unitOfTime", source = "unitOfTime")
     @Mapping(target = "amount", source = "amount")
+    @Mapping(target = "dateToReturn", source = "dateToReturn")
     TimeDto timeModelToDto(Time time);
 
     @Mapping(target = "id", source = "id")
     @Mapping(target = "unitOfTime", source = "unitOfTime")
     @Mapping(target = "amount", source = "amount")
-    @Mapping(target = "memorization", ignore = true)
+    @Mapping(target = "dateToReturn", source = "dateToReturn")
     Time timeDtoToModel(TimeDto timeDto);
 
     List<TimeDto> timeDtoMap(List<Time> repeat);
 
     List<Time> timeModelMap(List<TimeDto> repeat);
+
 
 }

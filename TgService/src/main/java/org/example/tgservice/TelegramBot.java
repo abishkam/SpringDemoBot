@@ -1,8 +1,10 @@
 package org.example.tgservice;
 
 import lombok.extern.slf4j.Slf4j;
+import org.example.tgservice.config.BotProperties;
 import org.example.tgservice.handler.CommandHandler;
 import org.example.tgservice.keyboardMarkups.Button;
+import org.example.tgservice.keyboardMarkups.ButtonHandler;
 import org.example.tgservice.property.patterns.BaseCommands;
 import org.springframework.context.ConfigurableApplicationContext;
 import org.springframework.stereotype.Component;
@@ -23,16 +25,15 @@ public class TelegramBot extends TelegramLongPollingBot {
 
     private final List<Button> buttons;
     private final CommandHandler commandHandler;
-    private final ConfigurableApplicationContext context;
+    private final ButtonHandler buttonHandler;
+    private final BotProperties botProperties;
 
     public TelegramBot(BaseCommands baseCommands,
                        List<Button> buttons,
-                       CommandHandler commandHandler, ConfigurableApplicationContext context) {
-        super(System.getenv("bot.token"));
-        this.context = context;
-        if(System.getenv("bot.token").equals("") || System.getenv("bot.name").equals("")){
-            context.close();
-        }
+                       CommandHandler commandHandler, ConfigurableApplicationContext context, ButtonHandler buttonHandler, BotProperties botProperties) {
+        super(botProperties.getToken());
+        this.buttonHandler = buttonHandler;
+        this.botProperties = botProperties;
         this.buttons = buttons;
         this.commandHandler = commandHandler;
         try {
@@ -44,6 +45,7 @@ public class TelegramBot extends TelegramLongPollingBot {
 
     @Override
     public void onUpdateReceived(Update update) {
+
         if (update.hasMessage() && update.getMessage().hasText()) {
 
             commandHandler.handler(update.getMessage());
@@ -52,20 +54,25 @@ public class TelegramBot extends TelegramLongPollingBot {
 
         if (update.hasCallbackQuery()) {
 
-            Button button = buttons.stream()
-                    .filter(i -> i.support(update.getCallbackQuery().getData()))
-                    .findFirst()
-                    .get();
+            if(update.getCallbackQuery().getData().startsWith("kafka")){
+                buttonHandler.handler(update);
+            } else {
 
-            executeEditMessageText(button.edit(update.getCallbackQuery().getMessage()));
+                Button button = buttons.stream()
+                        .filter(i -> i.support(update.getCallbackQuery().getData()))
+                        .findFirst()
+                        .get();
 
+                executeEditMessageText(button.edit(update.getCallbackQuery()));
+
+            }
         }
 
     }
 
     @Override
     public String getBotUsername() {
-        return System.getenv("bot.name");
+        return botProperties.getName();
     }
 
     public void executeSendMessage(SendMessage message) {

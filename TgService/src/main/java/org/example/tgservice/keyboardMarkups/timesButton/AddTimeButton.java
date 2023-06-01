@@ -3,7 +3,7 @@ package org.example.tgservice.keyboardMarkups.timesButton;
 import org.example.tgservice.keyboardMarkups.Button;
 import org.springframework.stereotype.Service;
 import org.telegram.telegrambots.meta.api.methods.updatingmessages.EditMessageText;
-import org.telegram.telegrambots.meta.api.objects.Message;
+import org.telegram.telegrambots.meta.api.objects.CallbackQuery;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.InlineKeyboardMarkup;
 import org.telegram.telegrambots.meta.api.objects.replykeyboard.buttons.InlineKeyboardButton;
 
@@ -15,21 +15,23 @@ import java.util.List;
 @Service
 public class AddTimeButton implements Button {
 
-    public InlineKeyboardMarkup inlineKeyboardMarkup() {
+    public InlineKeyboardMarkup inlineKeyboardMarkup(Long messageId) {
+
         InlineKeyboardMarkup keyboardMarkup = new InlineKeyboardMarkup();
-        var minutes = new InlineKeyboardButton();
-        minutes.setText("Минуты");
-        minutes.setCallbackData("minute");
+
+        var hours = new InlineKeyboardButton();
+        hours.setText("Часы");
+        hours.setCallbackData("hour " + messageId);
 
         var days = new InlineKeyboardButton();
         days.setText("Дни");
-        days.setCallbackData("day");
+        days.setCallbackData("day "+ messageId);
 
         var months = new InlineKeyboardButton();
         months.setText("Месяцы");
-        months.setCallbackData("month");
+        months.setCallbackData("month "+ messageId);
 
-        List<InlineKeyboardButton> choice = new ArrayList<>(Arrays.asList(minutes, days, months));
+        List<InlineKeyboardButton> choice = new ArrayList<>(Arrays.asList(hours, days, months));
 
         keyboardMarkup.setKeyboard(Collections.singletonList(choice));
 
@@ -37,17 +39,25 @@ public class AddTimeButton implements Button {
     }
 
     @Override
-    public EditMessageText edit(Message message) {
+    public EditMessageText edit(CallbackQuery callbackQuery) {
 
         EditMessageText editMessage = new EditMessageText();
-        editMessage.setChatId(message.getChatId().toString());
+        editMessage.setChatId(callbackQuery.getMessage().getChatId().toString());
         editMessage.setText("Выберите единицу времени");
-        editMessage.setReplyMarkup(inlineKeyboardMarkup());
-        editMessage.setMessageId(message.getMessageId());
+        editMessage.setReplyMarkup(
+                inlineKeyboardMarkup(
+                Long.valueOf(
+                        callbackQuery
+                        .getData()
+                        .split(" ")[1]
+                )));
+
+        editMessage.setMessageId(callbackQuery.getMessage().getMessageId());
+
         return editMessage;
     }
 
     public boolean support(String callback){
-        return callback.equals("Add_Time");
+        return callback.startsWith("Add_Time");
     }
 }
