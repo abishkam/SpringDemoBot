@@ -26,7 +26,6 @@ public class SendMessageHandler implements MessageHandler {
         if (mes.getText().trim().equals("/send")) {
             kafkaSender.patternResponse("emptyMessage",  chatId,"You didn't write message");
         } else {
-
             var textToSend = message.substring(mes.getText().indexOf(" "));
 
             kafkaSender.memorizationResponse("setInformation", chatId, messageId, textToSend);

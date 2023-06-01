@@ -13,6 +13,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.Date;
+
 @Entity
 @Getter
 @Setter
@@ -26,6 +28,7 @@ public class Time {
     private long id;
     private String unitOfTime;
     private short amount;
+    private Date dateToReturn;
     @ManyToOne
     @JoinColumn(name = "messageId")
     private Memorization memorization;
@@ -35,4 +38,13 @@ public class Time {
         this.amount = amount;
     }
 
+    @Override
+    public String toString() {
+        return "Time{" +
+                "id=" + id +
+                ", unitOfTime='" + unitOfTime + '\'' +
+                ", amount=" + amount +
+                ", memorization=" + memorization +
+                '}';
+    }
 }

@@ -16,7 +16,7 @@ public class SetInfotmation implements KafkaSender{
     private final TopicProperties topicProperties;
 
     public void send(DtoKeeper dtoKeeper) {
-        dtoKeeper.setMessage(memorizationService.setMessageToEntity(dtoKeeper.getUserDto(), dtoKeeper.getMemorizationDto()));
+        dtoKeeper.setMessage(memorizationService.setMessageToEntity(dtoKeeper));
         kafkaTemplate.send(topicProperties.getTopic(), dtoKeeper);
     }
 }
