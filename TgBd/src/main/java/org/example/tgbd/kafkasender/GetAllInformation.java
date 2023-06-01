@@ -7,7 +7,7 @@ import org.example.tgbd.services.MemorizationService;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Component;
 
-@Component("getAllInformation")
+@Component
 @RequiredArgsConstructor
 public class GetAllInformation implements KafkaSender {
 
@@ -19,7 +19,7 @@ public class GetAllInformation implements KafkaSender {
     public void send(DtoKeeper dtoKeeper) {
 
         dtoKeeper = memorizationService.getAllMessages(dtoKeeper);
-        kafkaTemplate.send(topicProperties.getTopic(), dtoKeeper);
+        kafkaTemplate.send(topicProperties.getServiceTopic(), dtoKeeper);
 
     }
 }

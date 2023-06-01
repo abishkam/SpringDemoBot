@@ -1,7 +1,7 @@
 package org.example.tgbd.kafka;
 
+import jakarta.validation.constraints.NotBlank;
 import lombok.Getter;
-import lombok.NonNull;
 import lombok.Setter;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.stereotype.Component;
@@ -12,7 +12,7 @@ import org.springframework.stereotype.Component;
 @Setter
 public class TopicProperties {
 
-    @NonNull
-    private String topic;
+    @NotBlank
+    private String serviceTopic;
 
 }

@@ -18,7 +18,6 @@ import java.util.List;
 @Builder
 public class UserDto {
 
-    //for bd
     private Long chatId;
     private String userName;
     private List<MemorizationDto> memorizationDtos;
