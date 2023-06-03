@@ -14,6 +14,5 @@ public class SetUnitOfTime implements KafkaSender {
     @Override
     public void send(DtoKeeper dtoKeeper) {
         timeService.setUnitOfTime(dtoKeeper);
-
     }
 }

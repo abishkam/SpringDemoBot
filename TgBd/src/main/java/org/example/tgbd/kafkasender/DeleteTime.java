@@ -17,7 +17,6 @@ public class DeleteTime implements KafkaSender {
 
     @Override
     public void send(DtoKeeper dtoKeeper) {
-        System.out.println(dtoKeeper);
         timeService.deleteTime(dtoKeeper);
         dtoKeeper = timeService.getListOfTimeOfMessage(dtoKeeper);
         dtoKeeper.setMethodName("getListOfTimeOfMessage");

@@ -5,6 +5,7 @@ import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 
+import java.util.Date;
 import java.util.List;
 
 public interface TimeRepository extends JpaRepository<Time, Long> {
@@ -30,5 +31,7 @@ public interface TimeRepository extends JpaRepository<Time, Long> {
     List<Time> findAllByMemorizationMessageId(
             @Param("messageId") Long messageId
     );
+
+    List<Time> findAllByDateToReturnBetween(Date dateToReturn, Date dateToReturn2);
 
 }

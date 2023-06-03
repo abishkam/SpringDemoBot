@@ -4,7 +4,8 @@ public enum UnitOfTime {
 
     HOURS(0),
     DAYS(1),
-    MONTHS(2);
+    MONTHS(2),
+    MINUTES(3);
 
     UnitOfTime(int on) {
         this.on = on;

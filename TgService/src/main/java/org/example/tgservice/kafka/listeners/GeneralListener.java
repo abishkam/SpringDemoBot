@@ -12,17 +12,18 @@ import org.telegram.telegrambots.meta.api.methods.send.SendMessage;
 @Service
 @RequiredArgsConstructor
 @Order(Ordered.LOWEST_PRECEDENCE)
-public class GeneralListener implements Listeners{
+public class GeneralListener implements Listeners {
 
     private final TelegramBot telegramBot;
 
-    public void send(DtoKeeper dtoKeeper){
+    public void send(DtoKeeper dtoKeeper) {
         SendMessage answer = new SendMessage(String.valueOf(dtoKeeper.getUserDto().getChatId()), dtoKeeper.getMessage());
 
         telegramBot.executeSendMessage(answer);
     }
 
-    public boolean support(String methodName){
+    public boolean support(String methodName) {
         return true;
     }
+
 }

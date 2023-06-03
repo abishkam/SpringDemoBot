@@ -21,7 +21,6 @@ public class GetAllInformationLitener implements Listeners{
     private final AllInformation allInformation;
 
     public void send(DtoKeeper dtoKeeper){
-        log.info(dtoKeeper.getMessage());
         if(dtoKeeper.getMemorizationDto() != null){
 
             EditMessageText editMessage = new EditMessageText();
